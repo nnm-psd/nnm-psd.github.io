@@ -1,23 +1,64 @@
 # nnm-psd.github.io
 Personal website
 
-# My GitHub Website
+# Ngoc Minh Nguyen
 
-Welcome to my GitHub website!
+Quantitative Analyst | Open Source Contributor
+
+---
 
 ## About Me
 
-I'm a passionate developer interested in technology and coding. I love to learn and explore new things in the world of programming.
+I am a dedicated and passionate software developer with a strong foundation in computer science and expertise in full-stack web development. I enjoy creating efficient, scalable, and user-friendly applications that solve real-world problems. I am enthusiastic about open source projects and believe in the power of collaboration and knowledge sharing.
+
+## Skills
+
+- **Programming Languages:** JavaScript, Python, Java, C++
+- **Web Development:** HTML, CSS, React.js, Node.js, Express.js, RESTful APIs
+- **Database Management:** SQL, MongoDB
+- **Version Control:** Git, GitHub
+- **Tools:** Visual Studio Code, Docker
+
+## Experience
+
+### Data Scientist Intern
+**NexGuard Labs France .** | Summer 2023
+
+- Developed and maintained web applications using React.js and Node.js.
+- Implemented RESTful APIs to interact with backend services and databases.
+- Collaborated with cross-functional teams to deliver high-quality software products.
+- Participated in code reviews and provided constructive feedback to team members.
+
+## Education
+
+### Double degree 
+**INSA Rennes** | Graduated: October 2024
+
+- Relevant coursework: Data Structures and Algorithms, Web Development, Database Management Systems, Software Engineering.
 
 ## Projects
 
-Here are some of the projects I've been working on:
+### Personal Portfolio Website
+- Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript.
+- Showcased projects, skills, and experience in an aesthetically pleasing manner.
 
-- [Project 1](link-to-project-1): Description of project 1.
-- [Project 2](link-to-project-2): Description of project 2.
-- [Project 3](link-to-project-3): Description of project 3.
+### Task Manager Application
+- Built a task manager application using React.js and Node.js with MongoDB as the database.
+- Implemented features such as user authentication, task creation, deletion, and status tracking.
+
+### Blogging Platform
+- Developed a full-stack blogging platform using MERN stack (MongoDB, Express.js, React.js, Node.js).
+- Allowed users to create, edit, and delete blog posts and comment on posts.
+
+## Certifications
+
+- **Full-Stack Web Development Certificate** - Coursera
+- **Git and GitHub Certificate** - LinkedIn Learning
 
 ## Contact
 
-Feel free to reach out to me via [email](mailto:minhnn238@email.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/minhnn238).
+- Email: john.doe@example.com
+- LinkedIn: [John Doe](https://www.linkedin.com/in/minhnn238)
+- GitHub: [johndoe](https://github.com/nnm-psd)
+
 
