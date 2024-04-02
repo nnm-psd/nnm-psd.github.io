@@ -19,5 +19,5 @@ Here are some of the projects I've been working on:
 
 ## Contact
 
-Feel free to reach out to me via [email](mailto:your@email.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/your-profile).
+Feel free to reach out to me via [email](mailto:minhnn238@email.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/minhnn238).
 
