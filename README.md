@@ -58,7 +58,7 @@ I am a dedicated and passionate software developer with a strong foundation in c
 ## Contact
 
 - Email: john.doe@example.com
-- LinkedIn: [John Doe](https://www.linkedin.com/in/minhnn238)
-- GitHub: [johndoe](https://github.com/nnm-psd)
+- LinkedIn: [Ngoc Minh Nguyen](https://www.linkedin.com/in/minhnn238)
+- GitHub: [Ngoc Minh Nguyen](https://github.com/nnm-psd)
 
 
