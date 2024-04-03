@@ -13,7 +13,7 @@ I am a dedicated and passionate software developer with a strong foundation in c
 
 ## Skills
 
-- **Programming Languages:** JavaScript, Python, Java, C++
+- **Programming Languages:** JavaScript, Python, Java, C++, R, SAS
 - **Web Development:** HTML, CSS, React.js, Node.js, Express.js, RESTful APIs
 - **Database Management:** SQL, MongoDB
 - **Version Control:** Git, GitHub
@@ -24,25 +24,50 @@ I am a dedicated and passionate software developer with a strong foundation in c
 ### Data Scientist Intern
 **NexGuard Labs France .** | Summer 2023
 
-- Developed and maintained web applications using React.js and Node.js.
-- Implemented RESTful APIs to interact with backend services and databases.
-- Collaborated with cross-functional teams to deliver high-quality software products.
-- Participated in code reviews and provided constructive feedback to team members.
+- Developed a model using Python
+- Implemented Machine Learning to detect anomalies in the streaming services.
+- Participated in code reviews and created dashboards to explain the results.
 
 ## Education
 
 ### Double degree 
+
+**IGR-IAE Rennes** | Graduated: October 2024
+
+- Relevant coursework:
+  + Quantitative Risk Management
+  + Fixed Income securities
+  + Derivatives / Options & Markets
+  + Financial Mathematics / Computational Mathematics
+  + Time series and Machine Learning
+  + Portfolio Management 1&2
+  + Accounting / Financial Analysis
+  + Capital Structure / International Corporate Finance
+  + Social & Green Finance
+  + VBA
+  + R Programming
+  + Risk Management in Banking
+- Relevant certifications:
+  + Bloomberg Market Concepts
+  + Autorité des Marchés Financiers (AMF)
+- Master thesis's reference: Machine Learning in Chinese stock market (Markus Leippold, Quian Wang, Wenyu Zhou (2021), Journal of Financial Economics)
+  
 **INSA Rennes** | Graduated: October 2024
 
-- Relevant coursework: Data Structures and Algorithms, Web Development, Database Management Systems, Software Engineering.
+- Relevant coursework:
+    + Probabilities & Statistics
+    + Fundamental Mathematics
+    + C/C++/Python/R
+    + Database
+    + Continuous Optimization / Discrete Optimization
 
 ## Projects
 
 ### Personal Portfolio Website
-- Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript.
+- Designed and developed a responsive portfolio website.
 - Showcased projects, skills, and experience in an aesthetically pleasing manner.
 
-### Task Manager Application
+### Risk Scoring project
 - Built a task manager application using React.js and Node.js with MongoDB as the database.
 - Implemented features such as user authentication, task creation, deletion, and status tracking.
 
