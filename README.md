@@ -9,7 +9,7 @@ Quantitative Analyst | Open Source Contributor
 
 ## About Me
 
-I am a dedicated and passionate software developer with a strong foundation in computer science and expertise in full-stack web development. I enjoy creating efficient, scalable, and user-friendly applications that solve real-world problems. I am enthusiastic about open source projects and believe in the power of collaboration and knowledge sharing.
+I am a dedicated and passionate quantitative analyst with a strong foundation in applied mathematics and expertise in full-stack web development. I enjoy creating efficient, scalable, and user-friendly applications that solve real-world problems. I am enthusiastic about open source projects and believe in the power of collaboration and knowledge sharing.
 
 ## Skills
 
@@ -60,6 +60,13 @@ I am a dedicated and passionate software developer with a strong foundation in c
     + C/C++/Python/R
     + Database
     + Continuous Optimization / Discrete Optimization
+  
+**Korean Advanced Institute of Science and Technology (KAIST)** | Exchange semester
+
+- Relevant coursework:
+    + Business Intelligence
+    + Advanced Statistics
+    + Combinatorics
 
 ## Projects
 
@@ -68,8 +75,8 @@ I am a dedicated and passionate software developer with a strong foundation in c
 - Showcased projects, skills, and experience in an aesthetically pleasing manner.
 
 ### Risk Scoring project
-- Built a task manager application using React.js and Node.js with MongoDB as the database.
-- Implemented features such as user authentication, task creation, deletion, and status tracking.
+- Built a model to assess the probability of clients stop using the service.
+- Implemented different methods of Machine Learning to classify and score the clients.
 
 ### Blogging Platform
 - Developed a full-stack blogging platform using MERN stack (MongoDB, Express.js, React.js, Node.js).
@@ -78,7 +85,15 @@ I am a dedicated and passionate software developer with a strong foundation in c
 ## Certifications
 
 - **Full-Stack Web Development Certificate** - Coursera
-- **Git and GitHub Certificate** - LinkedIn Learning
+- **Bloomberg Market Concepts** - Bloomberg
+- **AMF certification** - Autorité des Marchés Financiers (AMF)
+- **Fundamentals of Quantitative Modeling** - Coursera
+- **Convolutional Neural Networks** - Coursera
+- **Improving Deep Neural Networks: Hypeparameter Tuning, Regularization and Optimization** - Coursera
+- **Structuring Machine Learning Projects** - Coursera
+- **Neural Networks and Deep Learning** - Coursera
+- **Bayesian Statistics: From Concepts to Data Analysis** - Coursera
+- **Mathematics for Machine Learning** - Coursera 
 
 ## Contact
 
