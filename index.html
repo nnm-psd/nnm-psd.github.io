@@ -67,6 +67,7 @@
       ============================================================= -->
       <section id="top" class="hero">
         <div class="hero-top">
+          <img src="profile.jpg" alt="Minh" class="avatar" />
           <h1 data-i18n="hero.greeting">Hey, I'm Minh!</h1>
         </div>
 
@@ -161,142 +162,119 @@
       </section>
 
       <!-- ============================================================
-           PROJECTS — independent finance tools built outside work
+           PROJECTS — "positions" blotter, matching my_portfolio site
       ============================================================= -->
       <section id="projects" class="section" data-reveal>
         <h2 data-i18n="projects.title">Projects</h2>
         <p class="section-sub" data-i18n="projects.sub">
-          Independent tools built outside working hours — most deployed on Streamlit
-          Community Cloud or Hugging Face Spaces.
+          Projects, marked live as they ship.
         </p>
 
-        <div class="list">
-
-          <!-- Project: Portfolio Strategy Sandbox -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.sandbox.title">Portfolio Strategy Sandbox</h3>
-              <span class="item-date">2024</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.sandbox.desc">
-              Backtesting and Monte Carlo simulation for DCA, momentum, and dual-momentum
-              strategies, using block-bootstrap resampling to preserve cross-asset
-              correlation, with a fan-chart view and probability-of-target output.
-            </p>
-            <p class="item-meta" data-i18n="proj.sandbox.stack">Python · Streamlit · Monte Carlo · pandas</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.live">Demo</a> ·
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
+        <!-- Ticker tape -->
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span class="mono"><strong>SENT</strong> Financial Sentiment Dashboard <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>RISK</strong> PEA Risk Lab <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>SIM</strong> Strategy Simulation <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>NEXT</strong> New position opening <span class="dot status-wip">▾</span> IN PROGRESS</span>
+            <span class="mono"><strong>SENT</strong> Financial Sentiment Dashboard <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>RISK</strong> PEA Risk Lab <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>SIM</strong> Strategy Simulation <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>NEXT</strong> New position opening <span class="dot status-wip">▾</span> IN PROGRESS</span>
           </div>
-
-          <!-- Project: PEA Risk Lab -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.pea.title">PEA Risk Lab</h3>
-              <span class="item-date">2024</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.pea.desc">
-              Market and counterparty risk analysis for French equities and UCITS ETFs — VaR,
-              CVaR, beta, Sharpe ratio, max drawdown, a minimum-variance optimizer, and a
-              diversification-ratio readout as the focal view.
-            </p>
-            <p class="item-meta" data-i18n="proj.pea.stack">Python · SLSQP · yfinance</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.live">Demo</a> ·
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
-          </div>
-
-          <!-- Project: Options Analytics Lab -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.options.title">Options Analytics Lab</h3>
-              <span class="item-date">2023</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.options.desc">
-              A four-layer options pricing platform: Black-Scholes-Merton, Cox-Ross-Rubinstein
-              binomial trees with escrowed dividends, and Bjerksund-Stensland 2002, plus a
-              diagnostics and attribution layer.
-            </p>
-            <p class="item-meta" data-i18n="proj.options.stack">Python · BSM · Binomial trees · FRED API</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.live">Demo</a> ·
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
-          </div>
-
-          <!-- Project: European IB Valuation Pipeline -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.valuation.title">European IB Valuation Pipeline</h3>
-              <span class="item-date">2023</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.valuation.desc">
-              A no-LLM valuation pipeline that parses ESEF / iXBRL filings directly with
-              Arelle, running DCF, comparable companies, LBO, and precedent transaction
-              models, with results stored in SQLite.
-            </p>
-            <p class="item-meta" data-i18n="proj.valuation.stack">Python · Arelle · SQLAlchemy</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.live">Demo</a> ·
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
-          </div>
-
-          <!-- Project: Macro-to-Sector Rotation Pipeline -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.macro.title">Macro-to-Sector Rotation Pipeline</h3>
-              <span class="item-date">2023</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.macro.desc">
-              A sector-rotation signal built on free FRED macro series, with walk-forward
-              backtesting that handles publication lag and block-bootstrap significance
-              testing on the resulting Sharpe ratio.
-            </p>
-            <p class="item-meta" data-i18n="proj.macro.stack">Python · FRED · Sector ETFs</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.live">Demo</a> ·
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
-          </div>
-
-          <!-- Project: C++ Performance Engine -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.cpp.title">C++ Performance Engine</h3>
-              <span class="item-date">In progress</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.cpp.desc">
-              A pybind11 port of the backtest and Monte Carlo core to C++, with a Streamlit
-              toggle to switch between the Python and C++ engines and benchmark them side by
-              side.
-            </p>
-            <p class="item-meta" data-i18n="proj.cpp.stack">C++ · pybind11 · CMake</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
-          </div>
-
-          <!-- Project: Financial Sentiment Dashboard -->
-          <div class="item">
-            <div class="item-head">
-              <h3 data-i18n="proj.sentiment.title">Financial Sentiment Dashboard</h3>
-              <span class="item-date">2022</span>
-            </div>
-            <p class="item-desc" data-i18n="proj.sentiment.desc">
-              A cost-free sentiment analysis tool combining local FinBERT inference with
-              VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces.
-            </p>
-            <p class="item-meta" data-i18n="proj.sentiment.stack">FinBERT · VADER · Hugging Face</p>
-            <p class="item-links">
-              <a href="#" data-i18n="card.live">Demo</a> ·
-              <a href="#" data-i18n="card.source">Source</a>
-            </p>
-          </div>
-
         </div>
+
+        <!-- Positions table -->
+        <div class="table-wrap">
+          <table class="positions">
+            <thead>
+              <tr>
+                <th data-i18n="positions.sym">Sym</th>
+                <th data-i18n="positions.name">Name</th>
+                <th data-i18n="positions.type">Type</th>
+                <th data-i18n="positions.status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="mono sym">SENT</td>
+                <td>
+                  <a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard" data-i18n="proj.sentiment.title">Financial Sentiment Dashboard</a>
+                  <span class="row-tagline" data-i18n="proj.sentiment.tagline">Market data + financial news, scored locally with VADER &amp; FinBERT — no API cost.</span>
+                </td>
+                <td data-i18n="proj.sentiment.type">NLP / Markets</td>
+                <td class="status status-live"><a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+              </tr>
+
+              <tr>
+                <td class="mono sym">RISK</td>
+                <td>
+                  <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/" data-i18n="proj.pea.title">PEA Risk Lab</a>
+                  <span class="row-tagline" data-i18n="proj.pea.tagline">Market data + risk management for French equities and UCITS ETFs.</span>
+                </td>
+                <td data-i18n="proj.pea.type">Risk / Portfolio Management</td>
+                <td class="status status-live"><a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+              </tr>
+
+              <tr>
+                <td class="mono sym">SIM</td>
+                <td>
+                  <a href="https://strategysimulation-nnm-psd.streamlit.app/" data-i18n="proj.sandbox.title">Strategy Simulation</a>
+                  <span class="row-tagline" data-i18n="proj.sandbox.tagline">Market data + strategy testing — DCA, momentum, and Monte Carlo backtests.</span>
+                </td>
+                <td data-i18n="proj.sandbox.type">Strategy / Backtesting</td>
+                <td class="status status-live"><a href="https://strategysimulation-nnm-psd.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+              </tr>
+
+              <tr>
+                <td class="mono sym">OPT</td>
+                <td>
+                  <a href="#" data-i18n="proj.options.title">Options Analytics Lab</a>
+                  <span class="row-tagline" data-i18n="proj.options.tagline">BSM, binomial trees, and Bjerksund-Stensland pricing, cross-checked.</span>
+                </td>
+                <td data-i18n="proj.options.type">Derivatives Pricing</td>
+                <td class="status status-wip"><span>▾ <span data-i18n="positions.source">SOURCE</span></span></td>
+              </tr>
+
+              <tr>
+                <td class="mono sym">VAL</td>
+                <td>
+                  <a href="#" data-i18n="proj.valuation.title">European IB Valuation Pipeline</a>
+                  <span class="row-tagline" data-i18n="proj.valuation.tagline">ESEF / iXBRL filings parsed directly into DCF, comps, LBO models.</span>
+                </td>
+                <td data-i18n="proj.valuation.type">Valuation / IFRS</td>
+                <td class="status status-wip"><span>▾ <span data-i18n="positions.source">SOURCE</span></span></td>
+              </tr>
+
+              <tr>
+                <td class="mono sym">MACRO</td>
+                <td>
+                  <a href="#" data-i18n="proj.macro.title">Macro-to-Sector Rotation Pipeline</a>
+                  <span class="row-tagline" data-i18n="proj.macro.tagline">FRED macro signals driving a walk-forward sector rotation backtest.</span>
+                </td>
+                <td data-i18n="proj.macro.type">Macro / Sector Rotation</td>
+                <td class="status status-wip"><span>▾ <span data-i18n="positions.source">SOURCE</span></span></td>
+              </tr>
+
+              <tr>
+                <td class="mono sym">CPP</td>
+                <td>
+                  <a href="#" data-i18n="proj.cpp.title">C++ Performance Engine</a>
+                  <span class="row-tagline" data-i18n="proj.cpp.tagline">A pybind11 port of the backtest core, benchmarked against Python.</span>
+                </td>
+                <td data-i18n="proj.cpp.type">Performance Engineering</td>
+                <td class="status status-wip"><span>△ <span data-i18n="positions.in_progress">IN PROGRESS</span></span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <p class="positions-note">
+          <span class="dot status-wip">····</span>
+          <span data-i18n="positions.next_note">Next position opening soon — open positions above are live, not screenshots.</span>
+        </p>
       </section>
 
       <!-- ============================================================
