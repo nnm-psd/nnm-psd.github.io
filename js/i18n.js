@@ -23,8 +23,9 @@ const translations = {
     },
     education: {
       title: "Education",
-      entry1: "Replace with focus area, thesis topic, or relevant coursework — quantitative methods, derivatives pricing, statistics.",
-      entry2: "Replace with a short description — honors, relevant projects, or exchange programs."
+      entry1: "Coursework in quantitative finance, risk management, and financial econometrics. Thesis on Machine Learning in French stock markets under the supervision of Mr. Souleymane LAMINOU ABDOU.",
+      entry2: "Coursework in applied mathematics, numerical methods, and optimization. Thesis on the application of Applied Mathematics in Model Risk Management at BNP Paribas.",
+      entry3: "Coursework in Business Intelligence, Data Science, and Bayesian Statistics."
     },
     experience: {
       title: "Experience",
