@@ -1,32 +1,51 @@
 /* ===========================================================
    MAIN INTERACTIONS
-   - Mobile nav toggle
-   - Scroll-triggered reveal animations
+   - Light/dark theme toggle (persisted)
+   - Subtle scroll-triggered reveal
 =========================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* --- Mobile nav toggle --- */
-  const navToggle = document.getElementById('nav-toggle');
-  const mainNav = document.getElementById('main-nav');
+  /* --- Theme toggle --- */
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
 
-  if (navToggle && mainNav) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    if (themeToggle) {
+      const dict = (window.translations && window.translations[root.lang]) || {};
+      const label = theme === 'dark'
+        ? (dict.nav && dict.nav.theme_light) || 'Light'
+        : (dict.nav && dict.nav.theme_dark) || 'Dark';
+      themeToggle.textContent = label;
+    }
+    try { localStorage.setItem('preferred-theme', theme); } catch (e) { /* ignore */ }
+  }
 
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+  function initTheme() {
+    let theme = 'light';
+    try {
+      const saved = localStorage.getItem('preferred-theme');
+      if (saved) {
+        theme = saved;
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      }
+    } catch (e) { /* ignore */ }
+    applyTheme(theme);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
     });
   }
 
-  /* --- Scroll reveal --- */
-  const revealTargets = document.querySelectorAll('[data-reveal], .spark-divider-wrap');
+  initTheme();
 
+  /* --- Subtle scroll reveal --- */
+  const revealTargets = document.querySelectorAll('[data-reveal]');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (prefersReducedMotion) {
@@ -39,11 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
 
     revealTargets.forEach(el => observer.observe(el));
   } else {
-    // Fallback for very old browsers
     revealTargets.forEach(el => el.classList.add('is-visible'));
   }
 

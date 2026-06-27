@@ -9,26 +9,17 @@ const translations = {
   en: {
     meta: {
       title: "Minh — Quantitative Risk Analyst",
-      description: "Portfolio of quantitative finance tools, risk analytics, and engineering projects."
+      description: "Quantitative risk analyst and independent builder of finance tools."
     },
     nav: {
-      role: "Quant Risk Analyst",
-      education: "Education",
-      experience: "Experience",
-      projects: "Projects",
-      portfolio: "Portfolio",
-      contact: "Contact"
+      education: "Education", experience: "Experience", projects: "Projects",
+      certifications: "Certifications", portfolio: "Portfolio",
+      theme_dark: "Dark", theme_light: "Light"
     },
     hero: {
-      eyebrow: "Quantitative Risk Analyst — Paris, France",
-      title: "Building precise tools for risk, return, and decision-making.",
-      sub: "I design and ship quantitative finance applications — backtesting engines, options pricing libraries, and portfolio risk dashboards — alongside a full-time role in risk analysis.",
-      cta_projects: "View projects",
-      cta_contact: "Get in touch"
-    },
-    ticker: {
-      shipped: "7 TOOLS SHIPPED",
-      route: "PARIS → HO CHI MINH CITY"
+      greeting: "Hey, I'm Minh!",
+      bio: "I'm a quantitative risk analyst based in Paris. Outside of work, I build independent finance tools — backtesting engines, options pricing libraries, and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
+      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
       title: "Education",
@@ -46,27 +37,28 @@ const translations = {
       title: "Projects",
       sub: "Independent tools built outside working hours — most deployed on Streamlit Community Cloud or Hugging Face Spaces."
     },
-    card: {
-      live: "Live demo →",
-      source: "Source →"
-    },
+    card: { live: "Demo", source: "Source" },
     proj: {
-      sandbox: { title: "Portfolio Strategy Sandbox", desc: "A backtesting and Monte Carlo simulation tool for DCA, momentum, and dual-momentum strategies. Uses block-bootstrap resampling to preserve cross-asset correlation, with a fan-chart view and probability-of-target output." },
-      pea: { title: "PEA Risk Lab", desc: "Market and counterparty risk analysis for French equities and UCITS ETFs. Computes VaR, CVaR, beta, Sharpe ratio, and max drawdown, with a minimum-variance optimizer and a diversification-ratio readout as the focal view." },
-      options: { title: "Options Analytics Lab", desc: "A four-layer options pricing platform: Black-Scholes-Merton, Cox-Ross-Rubinstein binomial trees with escrowed dividends, and Bjerksund-Stensland 2002, plus a diagnostics and attribution layer on top." },
-      valuation: { title: "European IB Valuation Pipeline", desc: "A no-LLM valuation pipeline that parses ESEF / iXBRL filings directly with Arelle and runs DCF, comparable companies, LBO, and precedent transaction models, storing results in SQLite." },
-      macro: { title: "Macro-to-Sector Rotation Pipeline", desc: "A sector-rotation signal built on free FRED macro series, with walk-forward backtesting that handles publication lag and block-bootstrap significance testing on the resulting Sharpe ratio." },
-      cpp: { title: "C++ Performance Engine", desc: "In progress — a pybind11 port of the backtest and Monte Carlo core to C++, with a Streamlit toggle to switch between the Python and C++ engines and benchmark them side by side." },
-      sentiment: { title: "Financial Sentiment Dashboard", desc: "A cost-free sentiment analysis tool combining local FinBERT inference with VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces." }
+      sandbox: { title: "Portfolio Strategy Sandbox", desc: "Backtesting and Monte Carlo simulation for DCA, momentum, and dual-momentum strategies, using block-bootstrap resampling to preserve cross-asset correlation, with a fan-chart view and probability-of-target output.", stack: "Python · Streamlit · Monte Carlo · pandas" },
+      pea: { title: "PEA Risk Lab", desc: "Market and counterparty risk analysis for French equities and UCITS ETFs — VaR, CVaR, beta, Sharpe ratio, max drawdown, a minimum-variance optimizer, and a diversification-ratio readout as the focal view.", stack: "Python · SLSQP · yfinance" },
+      options: { title: "Options Analytics Lab", desc: "A four-layer options pricing platform: Black-Scholes-Merton, Cox-Ross-Rubinstein binomial trees with escrowed dividends, and Bjerksund-Stensland 2002, plus a diagnostics and attribution layer.", stack: "Python · BSM · Binomial trees · FRED API" },
+      valuation: { title: "European IB Valuation Pipeline", desc: "A no-LLM valuation pipeline that parses ESEF / iXBRL filings directly with Arelle, running DCF, comparable companies, LBO, and precedent transaction models, with results stored in SQLite.", stack: "Python · Arelle · SQLAlchemy" },
+      macro: { title: "Macro-to-Sector Rotation Pipeline", desc: "A sector-rotation signal built on free FRED macro series, with walk-forward backtesting that handles publication lag and block-bootstrap significance testing on the resulting Sharpe ratio.", stack: "Python · FRED · Sector ETFs" },
+      cpp: { title: "C++ Performance Engine", desc: "A pybind11 port of the backtest and Monte Carlo core to C++, with a Streamlit toggle to switch between the Python and C++ engines and benchmark them side by side.", stack: "C++ · pybind11 · CMake" },
+      sentiment: { title: "Financial Sentiment Dashboard", desc: "A cost-free sentiment analysis tool combining local FinBERT inference with VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
+    },
+    certifications: {
+      title: "Certifications",
+      entry1: "Replace with what this certification covers, and a credential ID or verification link if you have one.",
+      entry2: "Replace with what this certification covers, and a credential ID or verification link if you have one.",
+      entry3: "Replace with what this certification covers, and a credential ID or verification link if you have one."
     },
     portfolio: {
       title: "Financial Portfolio",
       sub: "A closer look at three flagship tools — the problem each one solves, the method behind it, and what it produces."
     },
     case: {
-      label_problem: "Problem",
-      label_approach: "Approach",
-      label_result: "Result",
+      label_problem: "Problem", label_approach: "Approach", label_result: "Result",
       sandbox: {
         title: "Portfolio Strategy Sandbox",
         problem: "Comparing DCA, momentum, and dual-momentum strategies under realistic, correlated market conditions rather than idealized assumptions.",
@@ -91,34 +83,23 @@ const translations = {
       title: "Contact",
       sub: "Open to conversations about quantitative finance, risk tooling, or collaboration."
     },
-    footer: {
-      note: "Built and deployed from scratch — view source on GitHub."
-    }
+    footer: { note: "Made by Minh. View source on GitHub." }
   },
 
   fr: {
     meta: {
       title: "Minh — Analyste Quantitatif des Risques",
-      description: "Portfolio d'outils de finance quantitative, d'analyse des risques et de projets d'ingénierie."
+      description: "Analyste quantitatif des risques et créateur indépendant d'outils financiers."
     },
     nav: {
-      role: "Analyste Quant",
-      education: "Formation",
-      experience: "Expérience",
-      projects: "Projets",
-      portfolio: "Portfolio",
-      contact: "Contact"
+      education: "Formation", experience: "Expérience", projects: "Projets",
+      certifications: "Certifications", portfolio: "Portfolio",
+      theme_dark: "Sombre", theme_light: "Clair"
     },
     hero: {
-      eyebrow: "Analyste Quantitatif des Risques — Paris, France",
-      title: "Construire des outils précis pour le risque, le rendement et la décision.",
-      sub: "Je conçois et déploie des applications de finance quantitative — moteurs de backtesting, bibliothèques de pricing d'options, tableaux de bord de risque de portefeuille — en parallèle d'un poste à temps plein en analyse des risques.",
-      cta_projects: "Voir les projets",
-      cta_contact: "Me contacter"
-    },
-    ticker: {
-      shipped: "7 OUTILS DÉPLOYÉS",
-      route: "PARIS → HÔ-CHI-MINH-VILLE"
+      greeting: "Salut, je suis Minh !",
+      bio: "Je suis analyste quantitatif des risques basé à Paris. En dehors du travail, je développe des outils financiers indépendants — moteurs de backtesting, bibliothèques de pricing d'options, tableaux de bord de risque de portefeuille. Cette page retrace ma formation, mon expérience et ce que j'ai construit.",
+      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
       title: "Formation",
@@ -136,27 +117,28 @@ const translations = {
       title: "Projets",
       sub: "Outils développés en dehors des heures de travail — la plupart déployés sur Streamlit Community Cloud ou Hugging Face Spaces."
     },
-    card: {
-      live: "Démo en ligne →",
-      source: "Code source →"
-    },
+    card: { live: "Démo", source: "Code source" },
     proj: {
-      sandbox: { title: "Portfolio Strategy Sandbox", desc: "Un outil de backtesting et de simulation Monte Carlo pour les stratégies DCA, momentum et dual-momentum. Utilise un block-bootstrap pour préserver la corrélation entre actifs, avec une vue en éventail et une probabilité d'atteindre un objectif." },
-      pea: { title: "PEA Risk Lab", desc: "Analyse du risque de marché et de contrepartie pour les actions françaises et ETF UCITS. Calcule VaR, CVaR, bêta, ratio de Sharpe et drawdown maximal, avec un optimiseur de variance minimale et un ratio de diversification comme indicateur principal." },
-      options: { title: "Options Analytics Lab", desc: "Une plateforme de pricing d'options à quatre couches : Black-Scholes-Merton, arbres binomiaux Cox-Ross-Rubinstein avec dividendes en dépôt, et Bjerksund-Stensland 2002, avec une couche de diagnostic et d'attribution." },
-      valuation: { title: "Pipeline de valorisation IB européen", desc: "Un pipeline de valorisation sans IA générative qui analyse directement les dépôts ESEF / iXBRL avec Arelle et exécute des modèles DCF, comparables boursiers, LBO et transactions précédentes, avec stockage SQLite." },
-      macro: { title: "Pipeline de rotation macro-sectorielle", desc: "Un signal de rotation sectorielle basé sur des séries macroéconomiques FRED gratuites, avec un backtesting walk-forward gérant le décalage de publication et un test de significativité du ratio de Sharpe par block-bootstrap." },
-      cpp: { title: "Moteur de performance C++", desc: "En cours — un portage en C++ via pybind11 du cœur de backtesting et de Monte Carlo, avec un bouton Streamlit pour basculer entre les moteurs Python et C++ et les comparer." },
-      sentiment: { title: "Tableau de bord de sentiment financier", desc: "Un outil d'analyse de sentiment gratuit combinant FinBERT en local et VADER, alimenté par des flux RSS gratuits et des données de marché, déployé sur Hugging Face Spaces." }
+      sandbox: { title: "Portfolio Strategy Sandbox", desc: "Backtesting et simulation Monte Carlo pour les stratégies DCA, momentum et dual-momentum, avec un block-bootstrap préservant la corrélation entre actifs, une vue en éventail et une probabilité d'atteindre un objectif.", stack: "Python · Streamlit · Monte Carlo · pandas" },
+      pea: { title: "PEA Risk Lab", desc: "Analyse du risque de marché et de contrepartie pour les actions françaises et ETF UCITS — VaR, CVaR, bêta, ratio de Sharpe, drawdown maximal, un optimiseur de variance minimale et un ratio de diversification comme indicateur principal.", stack: "Python · SLSQP · yfinance" },
+      options: { title: "Options Analytics Lab", desc: "Une plateforme de pricing d'options à quatre couches : Black-Scholes-Merton, arbres binomiaux Cox-Ross-Rubinstein avec dividendes en dépôt, et Bjerksund-Stensland 2002, avec une couche de diagnostic et d'attribution.", stack: "Python · BSM · Arbres binomiaux · FRED API" },
+      valuation: { title: "Pipeline de valorisation IB européen", desc: "Un pipeline de valorisation sans IA générative qui analyse directement les dépôts ESEF / iXBRL avec Arelle, exécutant des modèles DCF, comparables boursiers, LBO et transactions précédentes, avec stockage SQLite.", stack: "Python · Arelle · SQLAlchemy" },
+      macro: { title: "Pipeline de rotation macro-sectorielle", desc: "Un signal de rotation sectorielle basé sur des séries macroéconomiques FRED gratuites, avec un backtesting walk-forward gérant le décalage de publication et un test de significativité du ratio de Sharpe par block-bootstrap.", stack: "Python · FRED · ETF sectoriels" },
+      cpp: { title: "Moteur de performance C++", desc: "Un portage en C++ via pybind11 du cœur de backtesting et de Monte Carlo, avec un bouton Streamlit pour basculer entre les moteurs Python et C++ et les comparer.", stack: "C++ · pybind11 · CMake" },
+      sentiment: { title: "Tableau de bord de sentiment financier", desc: "Un outil d'analyse de sentiment gratuit combinant FinBERT en local et VADER, alimenté par des flux RSS gratuits et des données de marché, déployé sur Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
+    },
+    certifications: {
+      title: "Certifications",
+      entry1: "À remplacer par ce que couvre cette certification, avec un identifiant ou un lien de vérification si disponible.",
+      entry2: "À remplacer par ce que couvre cette certification, avec un identifiant ou un lien de vérification si disponible.",
+      entry3: "À remplacer par ce que couvre cette certification, avec un identifiant ou un lien de vérification si disponible."
     },
     portfolio: {
       title: "Portfolio Financier",
       sub: "Un regard approfondi sur trois outils phares — le problème que chacun résout, la méthode utilisée, et ce qu'il produit."
     },
     case: {
-      label_problem: "Problème",
-      label_approach: "Approche",
-      label_result: "Résultat",
+      label_problem: "Problème", label_approach: "Approche", label_result: "Résultat",
       sandbox: {
         title: "Portfolio Strategy Sandbox",
         problem: "Comparer les stratégies DCA, momentum et dual-momentum dans des conditions de marché réalistes et corrélées plutôt que sous des hypothèses idéalisées.",
@@ -181,34 +163,23 @@ const translations = {
       title: "Contact",
       sub: "Ouvert aux échanges sur la finance quantitative, les outils de gestion des risques ou la collaboration."
     },
-    footer: {
-      note: "Conçu et déployé de A à Z — voir le code source sur GitHub."
-    }
+    footer: { note: "Conçu par Minh. Voir le code source sur GitHub." }
   },
 
   vi: {
     meta: {
       title: "Minh — Chuyên Viên Phân Tích Rủi Ro Định Lượng",
-      description: "Danh mục các công cụ tài chính định lượng, phân tích rủi ro và dự án kỹ thuật."
+      description: "Chuyên viên phân tích rủi ro định lượng và người xây dựng độc lập các công cụ tài chính."
     },
     nav: {
-      role: "Chuyên Viên Rủi Ro Định Lượng",
-      education: "Học Vấn",
-      experience: "Kinh Nghiệm",
-      projects: "Dự Án",
-      portfolio: "Danh Mục",
-      contact: "Liên Hệ"
+      education: "Học Vấn", experience: "Kinh Nghiệm", projects: "Dự Án",
+      certifications: "Chứng Chỉ", portfolio: "Danh Mục",
+      theme_dark: "Tối", theme_light: "Sáng"
     },
     hero: {
-      eyebrow: "Chuyên Viên Phân Tích Rủi Ro Định Lượng — Paris, Pháp",
-      title: "Xây dựng công cụ chính xác cho rủi ro, lợi nhuận và quyết định đầu tư.",
-      sub: "Tôi thiết kế và triển khai các ứng dụng tài chính định lượng — công cụ backtest, thư viện định giá quyền chọn, và bảng điều khiển rủi ro danh mục — song song với công việc toàn thời gian trong lĩnh vực phân tích rủi ro.",
-      cta_projects: "Xem dự án",
-      cta_contact: "Liên hệ"
-    },
-    ticker: {
-      shipped: "7 CÔNG CỤ ĐÃ RA MẮT",
-      route: "PARIS → THÀNH PHỐ HỒ CHÍ MINH"
+      greeting: "Chào, tôi là Minh!",
+      bio: "Tôi là chuyên viên phân tích rủi ro định lượng, sống tại Paris. Ngoài công việc, tôi xây dựng các công cụ tài chính độc lập — công cụ backtest, thư viện định giá quyền chọn, và bảng điều khiển rủi ro danh mục. Trang này ghi lại học vấn, kinh nghiệm, và những gì tôi đã xây dựng.",
+      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
       title: "Học Vấn",
@@ -226,27 +197,28 @@ const translations = {
       title: "Dự Án",
       sub: "Các công cụ độc lập được xây dựng ngoài giờ làm việc — hầu hết được triển khai trên Streamlit Community Cloud hoặc Hugging Face Spaces."
     },
-    card: {
-      live: "Xem demo →",
-      source: "Mã nguồn →"
-    },
+    card: { live: "Demo", source: "Mã nguồn" },
     proj: {
-      sandbox: { title: "Portfolio Strategy Sandbox", desc: "Công cụ backtest và mô phỏng Monte Carlo cho các chiến lược DCA, momentum và dual-momentum. Sử dụng phương pháp block-bootstrap để giữ nguyên tương quan giữa các tài sản, kèm biểu đồ quạt và xác suất đạt mục tiêu." },
-      pea: { title: "PEA Risk Lab", desc: "Phân tích rủi ro thị trường và rủi ro đối tác cho cổ phiếu Pháp và ETF UCITS. Tính VaR, CVaR, beta, hệ số Sharpe và mức sụt giảm tối đa, kèm bộ tối ưu hóa phương sai tối thiểu và chỉ số đa dạng hóa làm trọng tâm." },
-      options: { title: "Options Analytics Lab", desc: "Nền tảng định giá quyền chọn bốn lớp: Black-Scholes-Merton, cây nhị thức Cox-Ross-Rubinstein với cổ tức ký quỹ, và Bjerksund-Stensland 2002, cùng lớp chẩn đoán và phân tích đóng góp." },
-      valuation: { title: "Pipeline Định Giá IB Châu Âu", desc: "Pipeline định giá không dùng AI tạo sinh, phân tích trực tiếp hồ sơ ESEF / iXBRL bằng Arelle và chạy các mô hình DCF, công ty so sánh, LBO và giao dịch tiền lệ, lưu trữ bằng SQLite." },
-      macro: { title: "Pipeline Xoay Vòng Ngành Theo Vĩ Mô", desc: "Tín hiệu xoay vòng ngành dựa trên dữ liệu vĩ mô FRED miễn phí, kèm backtest walk-forward xử lý độ trễ công bố dữ liệu và kiểm định ý nghĩa hệ số Sharpe bằng block-bootstrap." },
-      cpp: { title: "Bộ Xử Lý Hiệu Năng C++", desc: "Đang phát triển — chuyển phần lõi backtest và Monte Carlo sang C++ qua pybind11, kèm nút chuyển đổi Streamlit giữa bộ xử lý Python và C++ để so sánh hiệu năng." },
-      sentiment: { title: "Bảng Điều Khiển Tâm Lý Thị Trường", desc: "Công cụ phân tích tâm lý miễn phí kết hợp FinBERT chạy cục bộ và VADER, sử dụng dữ liệu RSS miễn phí và dữ liệu thị trường, triển khai trên Hugging Face Spaces." }
+      sandbox: { title: "Portfolio Strategy Sandbox", desc: "Backtest và mô phỏng Monte Carlo cho các chiến lược DCA, momentum và dual-momentum, dùng block-bootstrap để giữ tương quan giữa tài sản, kèm biểu đồ quạt và xác suất đạt mục tiêu.", stack: "Python · Streamlit · Monte Carlo · pandas" },
+      pea: { title: "PEA Risk Lab", desc: "Phân tích rủi ro thị trường và đối tác cho cổ phiếu Pháp và ETF UCITS — VaR, CVaR, beta, hệ số Sharpe, mức sụt giảm tối đa, bộ tối ưu hóa phương sai tối thiểu và chỉ số đa dạng hóa làm trọng tâm.", stack: "Python · SLSQP · yfinance" },
+      options: { title: "Options Analytics Lab", desc: "Nền tảng định giá quyền chọn bốn lớp: Black-Scholes-Merton, cây nhị thức Cox-Ross-Rubinstein với cổ tức ký quỹ, và Bjerksund-Stensland 2002, cùng lớp chẩn đoán và phân tích đóng góp.", stack: "Python · BSM · Cây nhị thức · FRED API" },
+      valuation: { title: "Pipeline Định Giá IB Châu Âu", desc: "Pipeline định giá không dùng AI tạo sinh, phân tích trực tiếp hồ sơ ESEF / iXBRL bằng Arelle, chạy các mô hình DCF, công ty so sánh, LBO và giao dịch tiền lệ, lưu bằng SQLite.", stack: "Python · Arelle · SQLAlchemy" },
+      macro: { title: "Pipeline Xoay Vòng Ngành Theo Vĩ Mô", desc: "Tín hiệu xoay vòng ngành dựa trên dữ liệu vĩ mô FRED miễn phí, kèm backtest walk-forward xử lý độ trễ công bố và kiểm định ý nghĩa hệ số Sharpe bằng block-bootstrap.", stack: "Python · FRED · ETF ngành" },
+      cpp: { title: "Bộ Xử Lý Hiệu Năng C++", desc: "Chuyển phần lõi backtest và Monte Carlo sang C++ qua pybind11, kèm nút chuyển đổi Streamlit giữa Python và C++ để so sánh hiệu năng.", stack: "C++ · pybind11 · CMake" },
+      sentiment: { title: "Bảng Điều Khiển Tâm Lý Thị Trường", desc: "Công cụ phân tích tâm lý miễn phí kết hợp FinBERT cục bộ và VADER, dùng dữ liệu RSS miễn phí và dữ liệu thị trường, triển khai trên Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
+    },
+    certifications: {
+      title: "Chứng Chỉ",
+      entry1: "Thay bằng nội dung chứng chỉ này bao quát, kèm mã chứng chỉ hoặc liên kết xác minh nếu có.",
+      entry2: "Thay bằng nội dung chứng chỉ này bao quát, kèm mã chứng chỉ hoặc liên kết xác minh nếu có.",
+      entry3: "Thay bằng nội dung chứng chỉ này bao quát, kèm mã chứng chỉ hoặc liên kết xác minh nếu có."
     },
     portfolio: {
       title: "Danh Mục Tài Chính",
       sub: "Phân tích sâu hơn về ba công cụ chủ lực — vấn đề mỗi công cụ giải quyết, phương pháp thực hiện, và kết quả tạo ra."
     },
     case: {
-      label_problem: "Vấn Đề",
-      label_approach: "Phương Pháp",
-      label_result: "Kết Quả",
+      label_problem: "Vấn Đề", label_approach: "Phương Pháp", label_result: "Kết Quả",
       sandbox: {
         title: "Portfolio Strategy Sandbox",
         problem: "So sánh các chiến lược DCA, momentum và dual-momentum trong điều kiện thị trường thực tế, có tương quan, thay vì giả định lý tưởng hóa.",
@@ -271,12 +243,12 @@ const translations = {
       title: "Liên Hệ",
       sub: "Luôn sẵn sàng trao đổi về tài chính định lượng, công cụ quản trị rủi ro, hoặc hợp tác."
     },
-    footer: {
-      note: "Được xây dựng và triển khai từ đầu — xem mã nguồn trên GitHub."
-    }
+    footer: { note: "Được xây dựng bởi Minh. Xem mã nguồn trên GitHub." }
   }
 
 };
+
+window.translations = translations;
 
 function getNested(obj, path) {
   return path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined) ? acc[key] : null, obj);
@@ -299,9 +271,16 @@ function applyLanguage(lang) {
 
   document.documentElement.lang = lang;
 
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-toggle .toggle-btn').forEach(btn => {
     btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
   });
+
+  // Keep the theme button label in sync with the new language
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    themeToggle.textContent = isDark ? dict.nav.theme_light : dict.nav.theme_dark;
+  }
 
   try { localStorage.setItem('preferred-lang', lang); } catch (e) { /* ignore */ }
 }
@@ -315,7 +294,7 @@ function initLanguage() {
 
   applyLanguage(lang);
 
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-toggle .toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
   });
 }

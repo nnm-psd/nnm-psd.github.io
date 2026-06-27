@@ -1,18 +1,15 @@
 # Personal Portfolio Website
 
-A static, multilingual (EN / FR / VI) personal site with scroll-triggered animations. No build step, no framework — pure HTML/CSS/JS, ready for GitHub Pages.
+A minimal, typography-led personal site (EN / FR / VI), modeled on [taniarascia.com](https://www.taniarascia.com/) — a narrow centered column, simple list-style sections, and a light/dark theme toggle. No build step, no framework, no cards or dashboards — pure HTML/CSS/JS, ready for GitHub Pages.
 
 ## File structure
 
 ```
 portfolio-website/
-├── index.html          # all page content + section markup
-├── css/styles.css       # design system + layout + animations
-├── js/i18n.js            # translations (EN/FR/VI) + language switch logic
-├── js/main.js            # mobile nav + scroll reveal logic
-├── assets/projects/      # drop project screenshots here
-├── assets/profile/       # drop a headshot here
-└── assets/README.md      # how to wire images into the cards
+├── index.html       # all page content + section markup
+├── css/styles.css    # design tokens (light + dark) + layout
+├── js/i18n.js         # translations (EN/FR/VI) + language switch logic
+└── js/main.js         # theme toggle + scroll reveal logic
 ```
 
 ## Preview locally
@@ -44,25 +41,27 @@ Then visit `http://localhost:8000`.
 
 These are placeholders you should replace — search `index.html` for them:
 
-- **Name in the nav logo**: currently set to "Minh" — add a surname if you'd like.
+- **Name in the logo**: currently set to "Minh" — add a surname if you'd like.
+- **Hero bio**: the intro paragraph and Email/GitHub/LinkedIn links under "Hey, I'm Minh!".
 - **Education section**: degree names, institutions, years, and descriptions (`[Your degree...]`, `[University name...]`).
 - **Experience section**: company name, dates, and bullet points (`[Company name]`).
+- **Certifications section**: three placeholder entries (`[Certification name]`, `[Issuing organization]`) — replace with your real certifications, or delete the `<div class="item">` blocks you don't need.
 - **Contact section**: real email, GitHub, and LinkedIn URLs (currently `your.email@example.com`, `github.com/yourusername`, etc.) — both the visible link text and the `href`/`mailto:` values.
-- **Project links**: each project card has `Live demo →` and `Source →` links pointing to `#` — point these at your actual Streamlit/Hugging Face deployments and GitHub repos.
+- **Project links**: each project entry has `Demo` and `Source` links pointing to `#` — point these at your actual Streamlit/Hugging Face deployments and GitHub repos.
 - **Translations**: the same placeholder strings exist in French and Vietnamese inside `js/i18n.js` — update the `fr` and `vi` objects to match whatever you change in English. The Vietnamese and French copy was machine-translated; have a native or fluent speaker skim it before publishing, especially the case-study section.
 
 ## Adding or removing a project
 
-Each project is a `<article class="card">` block inside `<section id="projects">`. Copy an existing block, change its content, and add a matching translation key set under `proj.yourkey` in `js/i18n.js` for all three languages (`en`, `fr`, `vi`) if you want it translated.
+Each project is a `<div class="item">` block inside `<section id="projects">`. Copy an existing block, change its content, and add a matching translation key set under `proj.yourkey` in `js/i18n.js` for all three languages (`en`, `fr`, `vi`) if you want it translated.
 
 ## Changing colors or fonts
 
-All design tokens live at the top of `css/styles.css` under `:root`. Change `--accent` to shift the whole site's accent color, or swap the Google Fonts `<link>` in `index.html`'s `<head>` plus the `--font-*` variables to change typefaces.
+All design tokens live at the top of `css/styles.css` under `:root` (light theme) and `[data-theme="dark"]` (dark theme). Change `--accent` in both blocks to shift the link/accent color, or swap the Google Fonts `<link>` in `index.html`'s `<head>` plus `--font-body` to change the typeface.
 
-## Notes on the language switch
+## Notes on the toggles
 
-- Language preference is remembered via `localStorage`, so returning visitors see their last-chosen language.
-- Default language is English; the toggle is in the top-right of the header.
+- **Language**: remembered via `localStorage`. Default is English.
+- **Theme**: remembered via `localStorage`; if nothing is saved yet, it follows the visitor's OS-level light/dark preference.
 - If you add new content with translatable text, give it a `data-i18n="some.key"` attribute, then add `some.key` to all three language objects in `js/i18n.js`.
 
 ## Accessibility & performance notes already built in

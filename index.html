@@ -1,338 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.title">Minh — Quantitative Risk Analyst</title>
-<meta name="description" content="Portfolio of quantitative finance tools, risk analytics, and engineering projects." data-i18n-attr="content:meta.description">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<a class="skip-link" href="#main">Skip to content</a>
+    <title data-i18n="meta.title">Minh — Quantitative Risk Analyst</title>
+    <meta
+      name="description"
+      content="Quantitative risk analyst and independent builder of finance tools."
+      data-i18n-attr="content:meta.description"
+    />
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-name">Minh</span>
-      <span class="logo-role" data-i18n="nav.role">Quant Risk Analyst</span>
-    </a>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <nav class="main-nav" id="main-nav">
-      <a href="#education" data-i18n="nav.education">Education</a>
-      <a href="#experience" data-i18n="nav.experience">Experience</a>
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-    <div class="header-controls">
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" data-lang="en" class="lang-btn is-active">EN</button>
-        <button type="button" data-lang="fr" class="lang-btn">FR</button>
-        <button type="button" data-lang="vi" class="lang-btn">VI</button>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================================================
+         HEADER — name, section nav, language + theme toggles
+    ============================================================= -->
+    <header class="site-header">
+      <div class="header-row">
+        <a href="#top" class="logo">Minh</a>
+
+        <nav class="main-nav">
+          <a href="#education" data-i18n="nav.education">Education</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        </nav>
       </div>
-      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
 
-<main id="main">
-
-  <!-- HERO -->
-  <section id="top" class="hero">
-    <p class="eyebrow mono" data-i18n="hero.eyebrow">Quantitative Risk Analyst — Paris, France</p>
-    <h1 data-i18n="hero.title">Building precise tools for risk, return, and decision-making.</h1>
-    <p class="hero-sub" data-i18n="hero.sub">I design and ship quantitative finance applications — backtesting engines, options pricing libraries, and portfolio risk dashboards — alongside a full-time role in risk analysis.</p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">View projects</a>
-      <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta_contact">Get in touch</a>
-    </div>
-  </section>
-
-  <!-- STAT TICKER (signature element) -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track mono">
-      <span>PYTHON · C++ · STREAMLIT</span><span class="dot">●</span>
-      <span data-i18n="ticker.shipped">7 TOOLS SHIPPED</span><span class="dot">●</span>
-      <span data-i18n="ticker.route">PARIS → HO CHI MINH CITY</span><span class="dot">●</span>
-      <span>PYTHON · C++ · STREAMLIT</span><span class="dot">●</span>
-      <span data-i18n="ticker.shipped">7 TOOLS SHIPPED</span><span class="dot">●</span>
-      <span data-i18n="ticker.route">PARIS → HO CHI MINH CITY</span><span class="dot">●</span>
-    </div>
-  </div>
-
-  <!-- EDUCATION -->
-  <section id="education" class="section">
-    <div class="section-head" data-reveal>
-      <span class="section-num mono">01</span>
-      <h2 data-i18n="education.title">Education</h2>
-    </div>
-
-    <div class="timeline">
-      <article class="timeline-item" data-reveal>
-        <div class="timeline-meta"><span class="timeline-year mono">20XX – 20XX</span></div>
-        <div class="timeline-body">
-          <h3>[Your degree — e.g. M.Sc. in Financial Engineering]</h3>
-          <p class="timeline-org">[University name — City, Country]</p>
-          <p data-i18n="education.entry1">Replace with focus area, thesis topic, or relevant coursework — quantitative methods, derivatives pricing, statistics.</p>
+      <div class="header-row header-controls">
+        <div class="toggle-group lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="toggle-btn is-active">EN</button>
+          <button type="button" data-lang="fr" class="toggle-btn">FR</button>
+          <button type="button" data-lang="vi" class="toggle-btn">VI</button>
         </div>
-      </article>
 
-      <article class="timeline-item" data-reveal>
-        <div class="timeline-meta"><span class="timeline-year mono">20XX – 20XX</span></div>
-        <div class="timeline-body">
-          <h3>[Your earlier degree, if applicable]</h3>
-          <p class="timeline-org">[University name — City, Country]</p>
-          <p data-i18n="education.entry2">Replace with a short description — honors, relevant projects, or exchange programs.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <div class="spark-divider-wrap" data-reveal>
-    <svg class="spark-divider" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,30 L60,30 L90,10 L130,32 L170,18 L220,30 L260,8 L310,30 L360,22 L410,30 L460,12 L510,30 L560,20 L600,30" />
-    </svg>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="section-head" data-reveal>
-      <span class="section-num mono">02</span>
-      <h2 data-i18n="experience.title">Experience</h2>
-    </div>
-
-    <div class="timeline">
-      <article class="timeline-item" data-reveal>
-        <div class="timeline-meta"><span class="timeline-year mono">20XX – Present</span></div>
-        <div class="timeline-body">
-          <h3 data-i18n="experience.role1_title">Quantitative Risk Analyst</h3>
-          <p class="timeline-org">[Company name] — Paris, France</p>
-          <ul class="timeline-list">
-            <li data-i18n="experience.role1_b1">Replace with a concrete responsibility — e.g. market or counterparty risk modeling, stress testing, reporting.</li>
-            <li data-i18n="experience.role1_b2">Replace with a second achievement — tooling built, process improved, or model validated.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="timeline-item" data-reveal>
-        <div class="timeline-meta"><span class="timeline-year mono">20XX – 20XX</span></div>
-        <div class="timeline-body">
-          <h3>[Previous role title]</h3>
-          <p class="timeline-org">[Company name] — [City]</p>
-          <p data-i18n="experience.role2">Replace with a short summary of this earlier position.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <div class="spark-divider-wrap" data-reveal>
-    <svg class="spark-divider" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,20 L50,8 L100,30 L150,14 L200,30 L250,6 L300,28 L350,16 L400,30 L450,10 L500,26 L550,18 L600,24" />
-    </svg>
-  </div>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="section-head" data-reveal>
-      <span class="section-num mono">03</span>
-      <h2 data-i18n="projects.title">Projects</h2>
-      <p class="section-sub" data-i18n="projects.sub">Independent tools built outside working hours — most deployed on Streamlit Community Cloud or Hugging Face Spaces.</p>
-    </div>
-
-    <div class="card-grid">
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">01</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.sandbox.title">Portfolio Strategy Sandbox</h3>
-          <p data-i18n="proj.sandbox.desc">A backtesting and Monte Carlo simulation tool for DCA, momentum, and dual-momentum strategies. Uses block-bootstrap resampling to preserve cross-asset correlation, with a fan-chart view and probability-of-target output.</p>
-          <ul class="tag-list mono">
-            <li>Python</li><li>Streamlit</li><li>Monte Carlo</li><li>pandas</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.live">Live demo →</a>
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">02</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.pea.title">PEA Risk Lab</h3>
-          <p data-i18n="proj.pea.desc">Market and counterparty risk analysis for French equities and UCITS ETFs. Computes VaR, CVaR, beta, Sharpe ratio, and max drawdown, with a minimum-variance optimizer and a diversification-ratio readout as the focal view.</p>
-          <ul class="tag-list mono">
-            <li>Python</li><li>SLSQP</li><li>yfinance</li><li>Risk metrics</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.live">Live demo →</a>
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">03</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.options.title">Options Analytics Lab</h3>
-          <p data-i18n="proj.options.desc">A four-layer options pricing platform: Black-Scholes-Merton, Cox-Ross-Rubinstein binomial trees with escrowed dividends, and Bjerksund-Stensland 2002, plus a diagnostics and attribution layer on top.</p>
-          <ul class="tag-list mono">
-            <li>Python</li><li>BSM</li><li>Binomial trees</li><li>FRED API</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.live">Live demo →</a>
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">04</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.valuation.title">European IB Valuation Pipeline</h3>
-          <p data-i18n="proj.valuation.desc">A no-LLM valuation pipeline that parses ESEF / iXBRL filings directly with Arelle and runs DCF, comparable companies, LBO, and precedent transaction models, storing results in SQLite.</p>
-          <ul class="tag-list mono">
-            <li>Python</li><li>Arelle</li><li>SQLAlchemy</li><li>ESEF/IFRS</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.live">Live demo →</a>
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">05</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.macro.title">Macro-to-Sector Rotation Pipeline</h3>
-          <p data-i18n="proj.macro.desc">A sector-rotation signal built on free FRED macro series, with walk-forward backtesting that handles publication lag and block-bootstrap significance testing on the resulting Sharpe ratio.</p>
-          <ul class="tag-list mono">
-            <li>Python</li><li>FRED</li><li>Walk-forward</li><li>Sector ETFs</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.live">Live demo →</a>
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">06</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.cpp.title">C++ Performance Engine</h3>
-          <p data-i18n="proj.cpp.desc">In progress — a pybind11 port of the backtest and Monte Carlo core to C++, with a Streamlit toggle to switch between the Python and C++ engines and benchmark them side by side.</p>
-          <ul class="tag-list mono">
-            <li>C++</li><li>pybind11</li><li>CMake</li><li>In progress</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-reveal>
-        <div class="card-image"><span class="mono">07</span></div>
-        <div class="card-body">
-          <h3 data-i18n="proj.sentiment.title">Financial Sentiment Dashboard</h3>
-          <p data-i18n="proj.sentiment.desc">A cost-free sentiment analysis tool combining local FinBERT inference with VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces.</p>
-          <ul class="tag-list mono">
-            <li>FinBERT</li><li>VADER</li><li>Hugging Face</li><li>NLP</li>
-          </ul>
-          <div class="card-links">
-            <a href="#" class="card-link" data-i18n="card.live">Live demo →</a>
-            <a href="#" class="card-link" data-i18n="card.source">Source →</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="spark-divider-wrap" data-reveal>
-    <svg class="spark-divider" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,28 L40,12 L90,26 L140,6 L190,30 L240,16 L290,30 L340,10 L390,28 L440,18 L490,30 L540,8 L600,22" />
-    </svg>
-  </div>
-
-  <!-- FINANCIAL PORTFOLIO / CASE STUDIES -->
-  <section id="portfolio" class="section">
-    <div class="section-head" data-reveal>
-      <span class="section-num mono">04</span>
-      <h2 data-i18n="portfolio.title">Financial Portfolio</h2>
-      <p class="section-sub" data-i18n="portfolio.sub">A closer look at three flagship tools — the problem each one solves, the method behind it, and what it produces.</p>
-    </div>
-
-    <div class="case-list">
-
-      <article class="case" data-reveal>
-        <div class="case-image"><span class="mono">CASE 01</span></div>
-        <div class="case-body">
-          <h3 data-i18n="case.sandbox.title">Portfolio Strategy Sandbox</h3>
-          <div class="case-grid">
-            <div><p class="case-label mono" data-i18n="case.label_problem">Problem</p><p data-i18n="case.sandbox.problem">Comparing DCA, momentum, and dual-momentum strategies under realistic, correlated market conditions rather than idealized assumptions.</p></div>
-            <div><p class="case-label mono" data-i18n="case.label_approach">Approach</p><p data-i18n="case.sandbox.approach">Block-bootstrap Monte Carlo simulation that preserves cross-asset correlation, instead of a standard geometric Brownian motion model.</p></div>
-            <div><p class="case-label mono" data-i18n="case.label_result">Result</p><p data-i18n="case.sandbox.result">A fan chart of simulated outcomes with percentile bands and the probability of reaching a target value.</p></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="case" data-reveal>
-        <div class="case-image"><span class="mono">CASE 02</span></div>
-        <div class="case-body">
-          <h3 data-i18n="case.pea.title">PEA Risk Lab</h3>
-          <div class="case-grid">
-            <div><p class="case-label mono" data-i18n="case.label_problem">Problem</p><p data-i18n="case.pea.problem">Most retail dashboards show performance but not risk concentration across a French equity and ETF portfolio.</p></div>
-            <div><p class="case-label mono" data-i18n="case.label_approach">Approach</p><p data-i18n="case.pea.approach">VaR, CVaR, beta, and a min-variance optimizer over a CAC 40 and UCITS ETF universe, solved via SLSQP.</p></div>
-            <div><p class="case-label mono" data-i18n="case.label_result">Result</p><p data-i18n="case.pea.result">A single diversification-ratio score as the headline view, with full risk decomposition underneath.</p></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="case" data-reveal>
-        <div class="case-image"><span class="mono">CASE 03</span></div>
-        <div class="case-body">
-          <h3 data-i18n="case.options.title">Options Analytics Lab</h3>
-          <div class="case-grid">
-            <div><p class="case-label mono" data-i18n="case.label_problem">Problem</p><p data-i18n="case.options.problem">Single-model option pricers can misprice American-style options around large discrete dividends.</p></div>
-            <div><p class="case-label mono" data-i18n="case.label_approach">Approach</p><p data-i18n="case.options.approach">Three pricing engines — BSM, CRR binomial trees, and Bjerksund-Stensland — cross-checked through a shared diagnostics layer.</p></div>
-            <div><p class="case-label mono" data-i18n="case.options.result_label">Known limit</p><p data-i18n="case.options.result">The escrowed-dividend method still understates early-exercise premium ahead of large dividends — documented as a next upgrade.</p></div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section section-contact">
-    <div class="section-head" data-reveal>
-      <span class="section-num mono">05</span>
-      <h2 data-i18n="contact.title">Contact</h2>
-    </div>
-    <div class="contact-body" data-reveal>
-      <p data-i18n="contact.sub">Open to conversations about quantitative finance, risk tooling, or collaboration.</p>
-      <div class="contact-links">
-        <a href="mailto:your.email@example.com" class="contact-link mono">your.email@example.com</a>
-        <a href="https://github.com/yourusername" class="contact-link mono">github.com/yourusername</a>
-        <a href="https://linkedin.com/in/yourusername" class="contact-link mono">linkedin.com/in/yourusername</a>
+        <button
+          type="button"
+          class="toggle-btn theme-toggle"
+          id="theme-toggle"
+          data-i18n="nav.theme_dark"
+          aria-label="Toggle light/dark theme"
+        >
+          Dark
+        </button>
       </div>
-    </div>
-  </section>
+    </header>
 
-</main>
+    <main id="main">
+      <!-- ============================================================
+           HERO — greeting, short bio, contact links
+      ============================================================= -->
+      <section id="top" class="hero">
+        <h1 data-i18n="hero.greeting">Hey, I'm Minh!</h1>
 
-<footer class="site-footer">
-  <p class="mono" data-i18n="footer.note">Built and deployed from scratch — view source on GitHub.</p>
-</footer>
+        <p class="bio" data-i18n="hero.bio">
+          I'm a quantitative risk analyst based in Paris. Outside of work, I build independent
+          finance tools — backtesting engines, options pricing libraries, and portfolio risk
+          dashboards. This page tracks my education, experience, and the things I've built.
+        </p>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
-</body>
+        <p class="inline-links">
+          <a href="mailto:your.email@example.com" data-i18n="hero.link_email">Email</a> ·
+          <a href="https://github.com/yourusername" data-i18n="hero.link_github">GitHub</a> ·
+          <a href="https://linkedin.com/in/yourusername" data-i18n="hero.link_linkedin">LinkedIn</a>
+        </p>
+      </section>
+
+      <!-- ============================================================
+           EDUCATION
+      ============================================================= -->
+      <section id="education" class="section" data-reveal>
+        <h2 data-i18n="education.title">Education</h2>
+
+        <div class="list">
+
+          <!-- Education entry 1 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>[Your degree — e.g. M.Sc. in Financial Engineering]</h3>
+              <span class="item-date">20XX–20XX</span>
+            </div>
+            <p class="item-meta">[University name — City, Country]</p>
+            <p class="item-desc" data-i18n="education.entry1">
+              Replace with focus area, thesis topic, or relevant coursework — quantitative
+              methods, derivatives pricing, statistics.
+            </p>
+          </div>
+
+          <!-- Education entry 2 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>[Your earlier degree, if applicable]</h3>
+              <span class="item-date">20XX–20XX</span>
+            </div>
+            <p class="item-meta">[University name — City, Country]</p>
+            <p class="item-desc" data-i18n="education.entry2">
+              Replace with a short description — honors, relevant projects, or exchange
+              programs.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EXPERIENCE
+      ============================================================= -->
+      <section id="experience" class="section" data-reveal>
+        <h2 data-i18n="experience.title">Experience</h2>
+
+        <div class="list">
+
+          <!-- Experience entry 1 -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="experience.role1_title">Quantitative Risk Analyst</h3>
+              <span class="item-date">20XX–Present</span>
+            </div>
+            <p class="item-meta">[Company name] — Paris, France</p>
+            <p class="item-desc" data-i18n="experience.role1_b1">
+              Replace with a concrete responsibility — e.g. market or counterparty risk
+              modeling, stress testing, reporting.
+            </p>
+            <p class="item-desc" data-i18n="experience.role1_b2">
+              Replace with a second achievement — tooling built, process improved, or model
+              validated.
+            </p>
+          </div>
+
+          <!-- Experience entry 2 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>[Previous role title]</h3>
+              <span class="item-date">20XX–20XX</span>
+            </div>
+            <p class="item-meta">[Company name] — [City]</p>
+            <p class="item-desc" data-i18n="experience.role2">
+              Replace with a short summary of this earlier position.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PROJECTS — independent finance tools built outside work
+      ============================================================= -->
+      <section id="projects" class="section" data-reveal>
+        <h2 data-i18n="projects.title">Projects</h2>
+        <p class="section-sub" data-i18n="projects.sub">
+          Independent tools built outside working hours — most deployed on Streamlit
+          Community Cloud or Hugging Face Spaces.
+        </p>
+
+        <div class="list">
+
+          <!-- Project: Portfolio Strategy Sandbox -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.sandbox.title">Portfolio Strategy Sandbox</h3>
+              <span class="item-date">2024</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.sandbox.desc">
+              Backtesting and Monte Carlo simulation for DCA, momentum, and dual-momentum
+              strategies, using block-bootstrap resampling to preserve cross-asset
+              correlation, with a fan-chart view and probability-of-target output.
+            </p>
+            <p class="item-meta" data-i18n="proj.sandbox.stack">Python · Streamlit · Monte Carlo · pandas</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.live">Demo</a> ·
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+          <!-- Project: PEA Risk Lab -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.pea.title">PEA Risk Lab</h3>
+              <span class="item-date">2024</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.pea.desc">
+              Market and counterparty risk analysis for French equities and UCITS ETFs — VaR,
+              CVaR, beta, Sharpe ratio, max drawdown, a minimum-variance optimizer, and a
+              diversification-ratio readout as the focal view.
+            </p>
+            <p class="item-meta" data-i18n="proj.pea.stack">Python · SLSQP · yfinance</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.live">Demo</a> ·
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+          <!-- Project: Options Analytics Lab -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.options.title">Options Analytics Lab</h3>
+              <span class="item-date">2023</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.options.desc">
+              A four-layer options pricing platform: Black-Scholes-Merton, Cox-Ross-Rubinstein
+              binomial trees with escrowed dividends, and Bjerksund-Stensland 2002, plus a
+              diagnostics and attribution layer.
+            </p>
+            <p class="item-meta" data-i18n="proj.options.stack">Python · BSM · Binomial trees · FRED API</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.live">Demo</a> ·
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+          <!-- Project: European IB Valuation Pipeline -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.valuation.title">European IB Valuation Pipeline</h3>
+              <span class="item-date">2023</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.valuation.desc">
+              A no-LLM valuation pipeline that parses ESEF / iXBRL filings directly with
+              Arelle, running DCF, comparable companies, LBO, and precedent transaction
+              models, with results stored in SQLite.
+            </p>
+            <p class="item-meta" data-i18n="proj.valuation.stack">Python · Arelle · SQLAlchemy</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.live">Demo</a> ·
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+          <!-- Project: Macro-to-Sector Rotation Pipeline -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.macro.title">Macro-to-Sector Rotation Pipeline</h3>
+              <span class="item-date">2023</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.macro.desc">
+              A sector-rotation signal built on free FRED macro series, with walk-forward
+              backtesting that handles publication lag and block-bootstrap significance
+              testing on the resulting Sharpe ratio.
+            </p>
+            <p class="item-meta" data-i18n="proj.macro.stack">Python · FRED · Sector ETFs</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.live">Demo</a> ·
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+          <!-- Project: C++ Performance Engine -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.cpp.title">C++ Performance Engine</h3>
+              <span class="item-date">In progress</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.cpp.desc">
+              A pybind11 port of the backtest and Monte Carlo core to C++, with a Streamlit
+              toggle to switch between the Python and C++ engines and benchmark them side by
+              side.
+            </p>
+            <p class="item-meta" data-i18n="proj.cpp.stack">C++ · pybind11 · CMake</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+          <!-- Project: Financial Sentiment Dashboard -->
+          <div class="item">
+            <div class="item-head">
+              <h3 data-i18n="proj.sentiment.title">Financial Sentiment Dashboard</h3>
+              <span class="item-date">2022</span>
+            </div>
+            <p class="item-desc" data-i18n="proj.sentiment.desc">
+              A cost-free sentiment analysis tool combining local FinBERT inference with
+              VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces.
+            </p>
+            <p class="item-meta" data-i18n="proj.sentiment.stack">FinBERT · VADER · Hugging Face</p>
+            <p class="item-links">
+              <a href="#" data-i18n="card.live">Demo</a> ·
+              <a href="#" data-i18n="card.source">Source</a>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CERTIFICATIONS
+      ============================================================= -->
+      <section id="certifications" class="section" data-reveal>
+        <h2 data-i18n="certifications.title">Certifications</h2>
+
+        <div class="list">
+
+          <!-- Certification 1 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>[Certification name]</h3>
+              <span class="item-date">20XX</span>
+            </div>
+            <p class="item-meta">[Issuing organization]</p>
+            <p class="item-desc" data-i18n="certifications.entry1">
+              Replace with what this certification covers, and a credential ID or
+              verification link if you have one.
+            </p>
+          </div>
+
+          <!-- Certification 2 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>[Certification name]</h3>
+              <span class="item-date">20XX</span>
+            </div>
+            <p class="item-meta">[Issuing organization]</p>
+            <p class="item-desc" data-i18n="certifications.entry2">
+              Replace with what this certification covers, and a credential ID or
+              verification link if you have one.
+            </p>
+          </div>
+
+          <!-- Certification 3 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>[Certification name]</h3>
+              <span class="item-date">20XX</span>
+            </div>
+            <p class="item-meta">[Issuing organization]</p>
+            <p class="item-desc" data-i18n="certifications.entry3">
+              Replace with what this certification covers, and a credential ID or
+              verification link if you have one.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FINANCIAL PORTFOLIO — case studies: problem / approach / result
+      ============================================================= -->
+      <section id="portfolio" class="section" data-reveal>
+        <h2 data-i18n="portfolio.title">Financial Portfolio</h2>
+        <p class="section-sub" data-i18n="portfolio.sub">
+          A closer look at three flagship tools — the problem each one solves, the method
+          behind it, and what it produces.
+        </p>
+
+        <div class="list">
+
+          <!-- Case study: Portfolio Strategy Sandbox -->
+          <div class="item">
+            <h3 data-i18n="case.sandbox.title">Portfolio Strategy Sandbox</h3>
+            <p class="item-desc">
+              <strong data-i18n="case.label_problem">Problem</strong> —
+              <span data-i18n="case.sandbox.problem">
+                Comparing DCA, momentum, and dual-momentum strategies under realistic,
+                correlated market conditions rather than idealized assumptions.
+              </span>
+            </p>
+            <p class="item-desc">
+              <strong data-i18n="case.label_approach">Approach</strong> —
+              <span data-i18n="case.sandbox.approach">
+                Block-bootstrap Monte Carlo simulation that preserves cross-asset
+                correlation, instead of a standard geometric Brownian motion model.
+              </span>
+            </p>
+            <p class="item-desc">
+              <strong data-i18n="case.label_result">Result</strong> —
+              <span data-i18n="case.sandbox.result">
+                A fan chart of simulated outcomes with percentile bands and the probability
+                of reaching a target value.
+              </span>
+            </p>
+          </div>
+
+          <!-- Case study: PEA Risk Lab -->
+          <div class="item">
+            <h3 data-i18n="case.pea.title">PEA Risk Lab</h3>
+            <p class="item-desc">
+              <strong data-i18n="case.label_problem">Problem</strong> —
+              <span data-i18n="case.pea.problem">
+                Most retail dashboards show performance but not risk concentration across a
+                French equity and ETF portfolio.
+              </span>
+            </p>
+            <p class="item-desc">
+              <strong data-i18n="case.label_approach">Approach</strong> —
+              <span data-i18n="case.pea.approach">
+                VaR, CVaR, beta, and a min-variance optimizer over a CAC 40 and UCITS ETF
+                universe, solved via SLSQP.
+              </span>
+            </p>
+            <p class="item-desc">
+              <strong data-i18n="case.label_result">Result</strong> —
+              <span data-i18n="case.pea.result">
+                A single diversification-ratio score as the headline view, with full risk
+                decomposition underneath.
+              </span>
+            </p>
+          </div>
+
+          <!-- Case study: Options Analytics Lab -->
+          <div class="item">
+            <h3 data-i18n="case.options.title">Options Analytics Lab</h3>
+            <p class="item-desc">
+              <strong data-i18n="case.label_problem">Problem</strong> —
+              <span data-i18n="case.options.problem">
+                Single-model option pricers can misprice American-style options around large
+                discrete dividends.
+              </span>
+            </p>
+            <p class="item-desc">
+              <strong data-i18n="case.label_approach">Approach</strong> —
+              <span data-i18n="case.options.approach">
+                Three pricing engines — BSM, CRR binomial trees, and Bjerksund-Stensland —
+                cross-checked through a shared diagnostics layer.
+              </span>
+            </p>
+            <p class="item-desc">
+              <strong data-i18n="case.options.result_label">Known limit</strong> —
+              <span data-i18n="case.options.result">
+                The escrowed-dividend method still understates early-exercise premium ahead
+                of large dividends — documented as a next upgrade.
+              </span>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CONTACT
+      ============================================================= -->
+      <section id="contact" class="section" data-reveal>
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p class="section-sub" data-i18n="contact.sub">
+          Open to conversations about quantitative finance, risk tooling, or collaboration.
+        </p>
+        <p class="inline-links">
+          <a href="mailto:your.email@example.com">your.email@example.com</a> ·
+          <a href="https://github.com/yourusername">github.com/yourusername</a> ·
+          <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================= -->
+    <footer class="site-footer">
+      <p data-i18n="footer.note">Made by Minh. View source on GitHub.</p>
+    </footer>
+
+    <!-- Scripts: i18n.js must load before main.js -->
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
