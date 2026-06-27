@@ -5,12 +5,17 @@ A minimal, typography-led personal site (EN / FR / VI), modeled on [taniarascia.
 ## File structure
 
 ```
-portfolio-website/
-├── index.html       # all page content + section markup
-├── css/styles.css    # design tokens (light + dark) + layout
-├── js/i18n.js         # translations (EN/FR/VI) + language switch logic
-└── js/main.js         # theme toggle + scroll reveal logic
+nnm-psd.github.io/
+├── index.html         # all page content + section markup
+├── css/styles.css      # design tokens (light + dark) + layout
+├── js/i18n.js           # translations (EN/FR/VI) + language switch logic
+├── js/main.js           # theme toggle + scroll reveal logic
+└── profile.jpg          # your photo — add this file (see below)
 ```
+
+## Adding your photo
+
+The hero section references `profile.jpg` (a circular avatar next to "Hey, I'm Minh!"). Add a photo to the repo root with that exact filename — a square image roughly 200×200px or larger works best, since it's cropped to a circle with `object-fit: cover`. If you'd rather use a different filename or format (e.g. `.png`), update the `src="profile.jpg"` in `index.html`'s hero section to match.
 
 ## Preview locally
 
