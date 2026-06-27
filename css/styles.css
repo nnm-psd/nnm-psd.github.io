@@ -9,7 +9,7 @@
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, monospace;
 
-  --max-w: 680px;
+  --max-w: 820px;
   --pad: clamp(20px, 6vw, 32px);
 }
 
@@ -120,6 +120,24 @@ a:hover { border-bottom-color: var(--accent); }
   padding: 48px var(--pad) 8px;
 }
 .hero h1 { font-size: clamp(1.7rem, 5vw, 2.1rem); }
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  background: var(--bg-secondary, #f0f0f0);
+}
+
 .bio { margin-top: 14px; color: var(--ink-soft); font-size: 1.02rem; max-width: 56ch; }
 .inline-links { margin-top: 16px; font-size: 0.95rem; }
 
