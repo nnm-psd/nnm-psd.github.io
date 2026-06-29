@@ -18,7 +18,7 @@ const translations = {
     },
     hero: {
       greeting: "Hey, I'm Minh!",
-      bio: "I'm a quantitative risk analyst based in Paris. Outside of work, I build independent finance tools — backtesting engines, options pricing libraries, and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
+      bio: "I'm a quantitative risk analyst based in France. Outside of work, I build independent finance tools — backtesting engines, options pricing libraries, and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
