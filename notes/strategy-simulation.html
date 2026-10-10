@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stress-testing portfolio strategies with a block bootstrap — Ngoc Minh NGUYEN</title>
+    <meta name="description" content="Why Strategy Simulation resamples blocks of real returns instead of assuming Gaussian returns, how it works, and its limits." />
+    <link rel="canonical" href="https://nnm-psd.github.io/notes/strategy-simulation.html" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script>
+      try {
+        var t = localStorage.getItem('preferred-theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+    <!-- Privacy-friendly analytics (GoatCounter, no cookies) -->
+    <script data-goatcounter="https://nnm-psd.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-row">
+        <a href="../" class="logo">← Ngoc Minh NGUYEN</a>
+        <button type="button" class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">Dark</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="note">
+        <p class="note-kicker">Project write-up · Strategy / Backtesting</p>
+        <h1>Stress-testing portfolio strategies with a block bootstrap</h1>
+        <p class="note-meta">
+          <a href="https://strategysimulation-nnm-psd.streamlit.app/">Live app</a> (may take ~30 s to wake up) ·
+          <a href="https://github.com/nnm-psd/strategy_simulation">Source code</a>
+        </p>
+
+        <h2>The problem</h2>
+        <p>
+          A historical backtest tells you how a strategy did on the one path history happened to take. To compare
+          buy-and-hold, DCA, rebalancing and momentum rules fairly, you want many plausible futures. The textbook way is
+          to simulate Gaussian, independent returns, but real returns have fat tails, volatility clusters, and
+          correlations between assets that the simulation then throws away. A momentum rule in particular depends on how
+          returns follow each other, which is exactly what independent draws destroy.
+        </p>
+
+        <h2>Approach: resample blocks of real history</h2>
+        <p>
+          Instead of drawing from a fitted distribution, the simulator cuts the historical monthly returns into blocks
+          (6 months by default) and stitches randomly chosen blocks together into new paths. Each block is taken for all
+          assets at once. That keeps:
+        </p>
+        <ul>
+          <li><strong>cross-asset correlation</strong>, because a block holds every asset's returns for the same months;</li>
+          <li><strong>short-range dependence</strong>, such as volatility clustering and short-term momentum, within each block;</li>
+          <li><strong>fat tails</strong>, because only returns that really happened are used.</li>
+        </ul>
+<pre><code>starts = rng.integers(0, T - block_size + 1, size=(n_sims, n_blocks))
+for b in range(n_blocks):
+    idx = starts[:, b][:, None] + np.arange(block_size)[None, :]
+    out[:, b*block_size:(b+1)*block_size, :] = hist_returns[idx]   # all assets together</code></pre>
+        <p>
+          Every strategy then runs on all paths at once (1,000 by default, NumPy-vectorised). Momentum rules compute their
+          trailing returns from each simulated path, so they only ever see that path's past.
+        </p>
+
+        <h2>Strategies and outputs</h2>
+        <ul>
+          <li><strong>Strategies:</strong> buy-and-hold, DCA without rebalancing, periodic rebalancing, relative momentum
+            (hold the top <em>K</em> assets by trailing return) and dual momentum (relative momentum plus a trend filter
+            that moves losing assets to cash).</li>
+          <li><strong>Forward view:</strong> a fan chart of the 5th to 95th percentiles of portfolio value, against money
+            invested, and the probability of reaching a target value.</li>
+          <li><strong>Historical view:</strong> CAGR, volatility, Sharpe, Sortino, maximum drawdown, Calmar, and monthly
+            95% VaR and CVaR.</li>
+        </ul>
+
+        <h2>Limits and what I'd change</h2>
+        <ul>
+          <li><strong>Block size is a trade-off.</strong> Short blocks lose dependence, long blocks make paths look too
+            much like history. The app lets you change it (1 to 24 months); a stationary bootstrap (random block lengths,
+            Politis–Romano) would make results less sensitive to that choice.</li>
+          <li><strong>Edge months are undersampled.</strong> Blocks don't wrap around the end of the sample, so the first
+            and last months of history appear in fewer blocks than the middle ones. A circular block bootstrap fixes this.</li>
+          <li><strong>The future is assumed to look like the lookback window.</strong> Fifteen years of a bond bull market
+            will make bonds look safer than they may be.</li>
+          <li><strong>It's a sandbox, not an execution simulator:</strong> no transaction costs, slippage or taxes, a monthly
+            grid, and cash earns 0%.</li>
+        </ul>
+
+        <p class="note-back"><a href="../#projects">← Back to all projects</a></p>
+      </article>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

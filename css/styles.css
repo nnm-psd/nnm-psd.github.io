@@ -143,6 +143,7 @@ a:hover { border-bottom-color: var(--accent); }
 }
 
 .bio { margin-top: 14px; color: var(--ink-soft); font-size: 1.02rem; max-width: 56ch; }
+.now { margin-top: 10px; font-size: 0.95rem; color: var(--ink); }
 .inline-links { margin-top: 16px; font-size: 0.95rem; }
 
 /* ============ SECTIONS ============ */
@@ -278,6 +279,31 @@ a:hover { border-bottom-color: var(--accent); }
 .skills dt { font-weight: 600; }
 .skills dd { margin: 0; color: var(--ink-soft); }
 
+/* ============ PROJECT WRITE-UPS (notes/) ============ */
+.note { max-width: 720px; margin: 0 auto; padding: 40px var(--pad) 0; }
+.note-kicker { font-size: 0.82rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; }
+.note h1 { font-size: clamp(1.6rem, 4.5vw, 2.05rem); line-height: 1.25; margin-top: 8px; }
+.note-meta { margin-top: 10px; font-size: 0.92rem; color: var(--ink-soft); }
+.note h2 { font-size: 1.2rem; margin-top: 36px; }
+.note p, .note li { margin-top: 12px; }
+.note ul { padding-left: 1.2em; margin: 0; }
+.note li { margin-top: 8px; }
+.note pre {
+  margin: 16px 0 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.note code { font-family: var(--font-mono); }
+.table-scroll { overflow-x: auto; margin-top: 16px; }
+.note table { width: 100%; border-collapse: collapse; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.note th { text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); font-weight: 600; }
+.note th, .note td { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.note-back { margin: 40px 0 56px; }
+
 /* ============ FOOTER ============ */
 .site-footer {
   max-width: var(--max-w);
@@ -356,4 +382,35 @@ a:hover { border-bottom-color: var(--accent); }
   .positions tr { break-inside: avoid; }
   .row-body:has(.row-shot) { display: block; }
   .row-tagline { font-size: 9pt; }
+}
+
+/* 1-page CV: tools/build_cv.py adds .cv-compact to <html> before printing */
+@page compact { size: A4; margin: 8mm 11mm; }
+@media print {
+  .cv-compact body { page: compact; font-size: 8.6pt; line-height: 1.27; }
+  .cv-compact .cv-name { font-size: 15pt; }
+  .cv-compact .cv-role, .cv-compact .cv-contact { font-size: 8.6pt; }
+  .cv-compact .section { padding-top: 4pt; }
+  .cv-compact .section h2 { font-size: 10pt; padding-bottom: 1.5pt; }
+  .cv-compact .list { margin-top: 1pt; }
+  .cv-compact .item { padding: 1.5pt 0; }
+  .cv-compact .item-head h3, .cv-compact .item h3 { font-size: 9pt; }
+  .cv-compact .item-meta, .cv-compact .item-desc { font-size: 8.4pt; margin-top: 0; }
+  .cv-compact .item-date { font-size: 8pt; }
+
+  .cv-compact .skills { margin-top: 3pt; grid-template-columns: 120px 1fr; gap: 1pt 10pt; font-size: 8.4pt; }
+
+  /* projects: one line each, no header or type column */
+  .cv-compact .positions thead, .cv-compact .positions td:nth-child(3) { display: none; }
+  .cv-compact .positions { font-size: 8.4pt; }
+  .cv-compact .positions td { padding: 0.5pt 8pt 0.5pt 0; border-bottom: none; }
+  .cv-compact .row-tagline { display: inline; font-size: 8.4pt; }
+  .cv-compact .row-tagline::before { content: " — "; }
+
+  /* certifications and competitions side by side in two columns */
+  .cv-compact #certifications .list, .cv-compact #competitions .list {
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 18pt;
+  }
+  .cv-compact #certifications .list { grid-template-columns: 1fr 1fr 1fr; column-gap: 14pt; }
+  .cv-compact .positions .sym { font-size: 7.6pt; }
 }

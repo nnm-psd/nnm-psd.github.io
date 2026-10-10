@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title data-i18n="meta.title">Minh — Quantitative Risk Analyst</title>
+    <title data-i18n="meta.title">Ngoc Minh NGUYEN — Quantitative Risk Analyst</title>
     <meta
       name="description"
       content="Quantitative risk analyst and independent builder of finance tools."
@@ -13,6 +13,34 @@
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://nnm-psd.github.io/" />
+
+    <link rel="alternate" hreflang="en" href="https://nnm-psd.github.io/" />
+    <link rel="alternate" hreflang="fr" href="https://nnm-psd.github.io/?lang=fr" />
+    <link rel="alternate" hreflang="vi" href="https://nnm-psd.github.io/?lang=vi" />
+    <link rel="alternate" hreflang="x-default" href="https://nnm-psd.github.io/" />
+
+    <!-- Structured data: tells search engines this page is a person's profile -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ngoc Minh NGUYEN",
+        "jobTitle": "Quantitative Risk Analyst",
+        "worksFor": { "@type": "Organization", "name": "BNP Paribas" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Bordeaux", "addressCountry": "FR" },
+        "url": "https://nnm-psd.github.io/",
+        "image": "https://nnm-psd.github.io/profile-256.jpg",
+        "email": "mailto:minhnn238@gmail.com",
+        "sameAs": ["https://www.linkedin.com/in/minhnn238/", "https://github.com/nnm-psd"],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "IGR-IAE Rennes" },
+          { "@type": "CollegeOrUniversity", "name": "INSA Rennes" },
+          { "@type": "CollegeOrUniversity", "name": "KAIST" }
+        ],
+        "knowsAbout": ["Credit risk", "Model risk", "IFRS 9", "Monte Carlo simulation", "Stochastic calculus", "Machine learning", "Derivatives pricing"],
+        "knowsLanguage": ["vi", "en", "fr"]
+      }
+    </script>
 
     <!-- Link previews (LinkedIn, Slack, X...) -->
     <meta property="og:type" content="website" />
@@ -43,6 +71,8 @@
         document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
     </script>
+    <!-- Privacy-friendly analytics (GoatCounter, no cookies) -->
+    <script data-goatcounter="https://nnm-psd.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   </head>
 
   <body>
@@ -102,8 +132,8 @@
       ============================================================= -->
       <section id="top" class="hero">
         <div class="hero-top">
-          <img src="profile-256.jpg" alt="Minh" class="avatar" width="84" height="84" />
-          <h1 data-i18n="hero.greeting">Hey, I'm Minh!</h1>
+          <img src="profile-256.jpg" alt="Ngoc Minh NGUYEN" class="avatar" width="84" height="84" />
+          <h1 data-i18n="hero.greeting">Hi, I'm Ngoc Minh NGUYEN</h1>
         </div>
 
         <p class="bio" data-i18n="hero.bio">
@@ -111,11 +141,13 @@
           finance tools — backtesting engines and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.
         </p>
 
+        <p class="now" data-i18n="hero.now">Currently learning: derivatives and option pricing.</p>
+
         <p class="inline-links">
           <a href="mailto:minhnn238@gmail.com" data-i18n="hero.link_email">Email</a> ·
           <a href="https://github.com/nnm-psd" data-i18n="hero.link_github">GitHub</a> ·
           <a href="https://linkedin.com/in/minhnn238/en/" data-i18n="hero.link_linkedin">LinkedIn</a> ·
-          <a href="cv/Ngoc_Minh_NGUYEN_CV_EN.pdf" data-i18n="hero.link_cv" data-i18n-attr="href:hero.cv_file" download>CV (PDF)</a>
+          <a href="cv/Ngoc_Minh_NGUYEN_CV_EN.pdf" data-i18n="hero.link_cv" data-i18n-attr="href:hero.cv_file" data-goatcounter-click="cv-download" data-goatcounter-title="CV download" download>CV (PDF)</a>
         </p>
       </section>
 
@@ -283,7 +315,7 @@
                 <td>
                   <div class="row-body">
                     <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/" data-i18n="proj.pea.title">PEA Risk Lab</a>
-                    <span class="row-tagline" data-i18n="proj.pea.tagline">Market data + risk management for French equities and UCITS ETFs.</span>
+                    <span class="row-tagline" data-i18n="proj.pea.tagline">Risk analysis for 20 French stocks and 7 UCITS ETFs — VaR, CVaR, beta, and a minimum-variance optimizer.</span>
                     <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/pea.webp" alt="" width="960" height="600" loading="lazy" /></a>
                   </div>
                 </td>
@@ -300,7 +332,7 @@
                 <td>
                   <div class="row-body">
                     <a href="https://strategysimulation-nnm-psd.streamlit.app/" data-i18n="proj.sandbox.title">Strategy Simulation</a>
-                    <span class="row-tagline" data-i18n="proj.sandbox.tagline">Market data + strategy testing — DCA, momentum, and Monte Carlo backtests.</span>
+                    <span class="row-tagline" data-i18n="proj.sandbox.tagline">Market data + strategy testing — DCA, momentum, and a 1,000-path block-bootstrap Monte Carlo.</span>
                     <a href="https://strategysimulation-nnm-psd.streamlit.app/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/sandbox.webp" alt="" width="960" height="600" loading="lazy" /></a>
                   </div>
                 </td>
@@ -308,6 +340,7 @@
                 <td class="status status-live">
                   <a href="https://strategysimulation-nnm-psd.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a>
                   <a href="https://github.com/nnm-psd/strategy_simulation" class="src-link" data-i18n="positions.source">SOURCE</a>
+                  <a href="notes/strategy-simulation.html" class="src-link" data-i18n="positions.writeup">WRITE-UP</a>
                   <span class="wake-note" data-i18n="positions.wake">May take ~30 s to wake up</span>
                 </td>
               </tr>
@@ -317,7 +350,7 @@
                 <td>
                   <div class="row-body">
                     <a href="https://nnm-psd.github.io/france_economic_pulse/" data-i18n="proj.pulse.title">France Economic Pulse</a>
-                    <span class="row-tagline" data-i18n="proj.pulse.tagline">Open-data nowcast of French industrial production, refit and published daily.</span>
+                    <span class="row-tagline" data-i18n="proj.pulse.tagline">Daily open-data nowcast of French industrial production — 5% lower error than a naive benchmark over a 127-month walk-forward backtest.</span>
                     <a href="https://nnm-psd.github.io/france_economic_pulse/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/pulse.webp" alt="" width="960" height="600" loading="lazy" /></a>
                   </div>
                 </td>
@@ -325,6 +358,7 @@
                 <td class="status status-live">
                   <a href="https://nnm-psd.github.io/france_economic_pulse/">● <span data-i18n="positions.live">LIVE</span> →</a>
                   <a href="https://github.com/nnm-psd/france_economic_pulse" class="src-link" data-i18n="positions.source">SOURCE</a>
+                  <a href="notes/france-economic-pulse.html" class="src-link" data-i18n="positions.writeup">WRITE-UP</a>
                 </td>
               </tr>
 

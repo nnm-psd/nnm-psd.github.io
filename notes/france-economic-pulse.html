@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nowcasting French industrial production — Ngoc Minh NGUYEN</title>
+    <meta name="description" content="How France Economic Pulse nowcasts French industrial production from open data, how it is evaluated, and where it falls short." />
+    <link rel="canonical" href="https://nnm-psd.github.io/notes/france-economic-pulse.html" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script>
+      try {
+        var t = localStorage.getItem('preferred-theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+    <!-- Privacy-friendly analytics (GoatCounter, no cookies) -->
+    <script data-goatcounter="https://nnm-psd.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-row">
+        <a href="../" class="logo">← Ngoc Minh NGUYEN</a>
+        <button type="button" class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">Dark</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <article class="note">
+        <p class="note-kicker">Project write-up · Macro / Nowcasting</p>
+        <h1>Nowcasting French industrial production from open data</h1>
+        <p class="note-meta">
+          <a href="https://nnm-psd.github.io/france_economic_pulse/en/">Live site</a> ·
+          <a href="https://github.com/nnm-psd/france_economic_pulse">Source code</a> ·
+          <a href="https://github.com/nnm-psd/france_economic_pulse/blob/main/docs/ARCHITECTURE.md">Full design notes</a>
+        </p>
+
+        <h2>The problem</h2>
+        <p>
+          INSEE publishes France's industrial production index (IPI) about 40 days after the month ends.
+          Plenty of data about that month is already public long before then: electricity consumption,
+          business surveys, company insolvencies, bond spreads. France Economic Pulse uses that data to
+          estimate the month before INSEE does (a <em>nowcast</em>), and rebuilds the estimate every day.
+        </p>
+
+        <h2>Data, aligned to when it was really known</h2>
+        <p>All five sources are free, need no API key, and are fetched by a daily GitHub Actions job.</p>
+        <ul>
+          <li><strong>Electricity consumption</strong> (RTE): the main real-time signal. Heating makes French demand very
+            sensitive to temperature, so a cold month looks like an industrial boom. I regress consumption on heating and
+            cooling degree days (Open-Meteo, 8 large cities) and use the residual.</li>
+          <li><strong>Business climate</strong> (INSEE survey), <strong>insolvency openings</strong> (BODACC, year-on-year change)
+            and the <strong>France–Germany 10-year spread</strong> (ECB).</li>
+          <li><strong>The target's own history</strong>, lagged two months, because that's the latest figure INSEE has published
+            when the nowcast is made.</li>
+        </ul>
+        <p>
+          Every feature is aligned to the date it was published, not the month it describes, and the weather
+          correction is refitted at each backtest step using only past data. Without that, the backtest would quietly
+          use information the model couldn't have had.
+        </p>
+
+        <h2>Model: start from the simplest benchmark</h2>
+        <p>
+          The rule was that complexity has to earn its place. The benchmark is an AR(1) on IPI growth. The main model is a
+          ridge regression on the features above. Gradient boosting is a challenger, kept only if it beats ridge out of
+          sample. With about 175 months of overlapping data, a regularised linear model was the natural favourite.
+        </p>
+
+        <h2>Evaluation: walk-forward, never random splits</h2>
+        <p>
+          The backtest uses an expanding window from January 2016 to July 2026 (127 months): train on everything up to
+          month <em>t</em>, predict <em>t</em>+1, step forward. Random k-fold splits would leak the future in a time series.
+          Models are compared on RMSE, directional accuracy and a one-sided Diebold–Mariano test against the benchmark.
+          March–July 2020 is excluded from the scores because COVID errors swamp everything else.
+        </p>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>Model</th><th>RMSE</th><th>vs AR(1)</th><th>DM p-value</th><th>Right direction</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>AR(1) benchmark</td><td>1.33</td><td>1.00</td><td>—</td><td>48%</td></tr>
+              <tr><td><strong>Ridge (published)</strong></td><td><strong>1.26</strong></td><td><strong>0.95</strong></td><td><strong>0.07</strong></td><td><strong>59%</strong></td></tr>
+              <tr><td>Gradient boosting</td><td>1.35</td><td>1.02</td><td>0.63</td><td>54%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Ridge has 5% lower error than the benchmark and gets the direction right about 6 times in 10. Gradient boosting
+          does worse than the benchmark, so it stays in the table only for transparency. The published 80% range is
+          built only from errors known at the time; over 97 months, the actual figure fell inside it 80.4% of the time.
+        </p>
+
+        <h2>What it doesn't show</h2>
+        <ul>
+          <li><strong>The gain is suggestive, not proven.</strong> p = 0.07 misses the usual 5% bar. Monthly IPI growth is
+            mostly noise (standard deviation about 1.3%), so a small edge is what a good model can realistically show.</li>
+          <li><strong>The edge hasn't held recently.</strong> Over the last 24 months, ridge's RMSE is 0.95 against 0.93 for the
+            benchmark. The site says so on its model page.</li>
+          <li><strong>The scores are optimistic.</strong> They use INSEE's latest revised data, which the model wouldn't have
+            had in real time. Every release is now archived as published, so a true real-time track record builds from launch.</li>
+          <li><strong>Septembers are biased low.</strong> A variant that refits the weather correction on recent seasons fixes
+            this, but it is worse over the full period, so it wasn't adopted. Variants were fixed before testing, and tuning
+            until one wins would just overfit the backtest.</li>
+          <li><strong>The GDP version failed.</strong> A quarterly GDP nowcast built the same way doesn't beat a naive forecast,
+            so it's shown only on an experimental page.</li>
+        </ul>
+
+        <h2>Engineering</h2>
+        <p>
+          A daily GitHub Actions run fetches only new data, stores it as Parquet in the repository, refits the model,
+          writes the site's data file and deploys a static Astro site in French and English. If a source is down, the site
+          still rebuilds with its last good data and the run is flagged so I get an email.
+        </p>
+
+        <p class="note-back"><a href="../#projects">← Back to all projects</a></p>
+      </article>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
