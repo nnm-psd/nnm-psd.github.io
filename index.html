@@ -11,6 +11,19 @@
       data-i18n-attr="content:meta.description"
     />
 
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://nnm-psd.github.io/" />
+
+    <!-- Link previews (LinkedIn, Slack, X...) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nnm-psd.github.io/" />
+    <meta property="og:title" content="Ngoc Minh NGUYEN — Quantitative Risk Analyst" />
+    <meta property="og:description" content="Quantitative risk analyst at BNP Paribas: credit risk, model risk, and independent quant projects." />
+    <meta property="og:image" content="https://nnm-psd.github.io/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +48,18 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <!-- CV header: print / PDF only (see tools/build_cv.py) -->
+    <div class="cv-head print-only">
+      <p class="cv-name">Ngoc Minh NGUYEN</p>
+      <p class="cv-role"><span data-i18n="experience.role1_title">Quantitative Risk Analyst</span> · Bordeaux, France</p>
+      <p class="cv-contact">
+        <a href="mailto:minhnn238@gmail.com">minhnn238@gmail.com</a> ·
+        <a href="https://nnm-psd.github.io/">nnm-psd.github.io</a> ·
+        <a href="https://linkedin.com/in/minhnn238/en/">linkedin.com/in/minhnn238</a> ·
+        <a href="https://github.com/nnm-psd">github.com/nnm-psd</a>
+      </p>
+    </div>
+
     <!-- ============================================================
          HEADER — name, section nav, language + theme toggles
     ============================================================= -->
@@ -45,6 +70,7 @@
         <nav class="main-nav">
           <a href="#education" data-i18n="nav.education">Education</a>
           <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
           <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
           <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
@@ -88,7 +114,8 @@
         <p class="inline-links">
           <a href="mailto:minhnn238@gmail.com" data-i18n="hero.link_email">Email</a> ·
           <a href="https://github.com/nnm-psd" data-i18n="hero.link_github">GitHub</a> ·
-          <a href="https://linkedin.com/in/minhnn238/en/" data-i18n="hero.link_linkedin">LinkedIn</a>
+          <a href="https://linkedin.com/in/minhnn238/en/" data-i18n="hero.link_linkedin">LinkedIn</a> ·
+          <a href="cv/Ngoc_Minh_NGUYEN_CV_EN.pdf" data-i18n="hero.link_cv" data-i18n-attr="href:hero.cv_file" download>CV (PDF)</a>
         </p>
       </section>
 
@@ -168,7 +195,7 @@
             <p class="item-desc" data-i18n="experience.role1_b1">Lead the monthly IFRS 9 provisions reporting, ensuring reliability and on-time delivery.</p>
             <p class="item-desc" data-i18n="experience.role1_b2">Analyze the Retail portfolio (exposure above €100M), identifying the main risk concentrations.</p>
             <p class="item-desc" data-i18n="experience.role1_b3">Run impact simulations on EAD, LGD, and PD.</p>
-            <p class="item-desc" data-i18n="experience.role1_b4">Optimize existing reporting tools, making the provisioning process more efficient.</p>
+            <p class="item-desc" data-i18n="experience.role1_b4">Optimize existing reporting tools, cutting the reporting process from several days to 2 hours.</p>
             <p class="item-desc" data-i18n="experience.role1_b5">Study the risk factors driving PD changes across customer segments.</p>
             <p class="item-desc" data-i18n="experience.role1_stack">Tech stack: SAS, Python, VBA, Power BI.</p>
           </div>
@@ -180,7 +207,7 @@
               <span class="item-date" data-i18n="experience.role2_date">May 2024 – Oct 2024</span>
             </div>
             <p class="item-meta">BNP Paribas — Bordeaux, France</p>
-            <p class="item-desc" data-i18n="experience.role2">Developed a Model Risk Rating (MRR) model: data collection, machine learning, hyper-parameter tuning, and continuous optimization.</p>
+            <p class="item-desc" data-i18n="experience.role2">Developed a Model Risk Rating (MRR) model used to rank the risk of more than 100 models: data collection, machine learning, hyper-parameter tuning, and continuous optimization.</p>
           </div>
 
           <!-- Experience entry 3 -->
@@ -196,6 +223,24 @@
       </section>
 
       <!-- ============================================================
+           SKILLS
+      ============================================================= -->
+      <section id="skills" class="section" data-reveal>
+        <h2 data-i18n="skills.title">Skills</h2>
+
+        <dl class="skills">
+          <dt data-i18n="skills.label_prog">Programming</dt>
+          <dd>Python (pandas, scikit-learn, Streamlit), SAS, VBA, JavaScript</dd>
+          <dt data-i18n="skills.label_quant">Quantitative methods</dt>
+          <dd data-i18n="skills.quant">Credit risk (PD, LGD, EAD), IFRS 9 provisioning, model risk, VaR / expected shortfall, Monte Carlo simulation, stochastic calculus, machine learning, credit scorecards (WOE / IV)</dd>
+          <dt data-i18n="skills.label_tools">Tools</dt>
+          <dd>Power BI, Dataiku, Bloomberg, Git / GitHub Actions</dd>
+          <dt data-i18n="skills.label_lang">Languages</dt>
+          <dd data-i18n="skills.lang">Vietnamese (native), English (full professional), French (full professional)</dd>
+        </dl>
+      </section>
+
+      <!-- ============================================================
            PROJECTS — "positions" blotter, matching my_portfolio site
       ============================================================= -->
       <section id="projects" class="section" data-reveal>
@@ -203,26 +248,6 @@
         <p class="section-sub" data-i18n="projects.sub">
           Projects, marked live as they ship.
         </p>
-
-        <!-- Ticker tape -->
-        <div class="ticker" aria-hidden="true">
-          <div class="ticker-track">
-            <span class="mono"><strong>SENT</strong> Financial Sentiment Dashboard <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>RISK</strong> PEA Risk Lab <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>SIM</strong> Strategy Simulation <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>PULSE</strong> France Economic Pulse <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>DIST</strong> Distribution Lab <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>SDE</strong> Visual Stochastic Calculus <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>NEXT</strong> New position opening <span class="dot status-wip">▾</span> IN PROGRESS</span>
-            <span class="mono"><strong>SENT</strong> Financial Sentiment Dashboard <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>RISK</strong> PEA Risk Lab <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>SIM</strong> Strategy Simulation <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>PULSE</strong> France Economic Pulse <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>DIST</strong> Distribution Lab <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>SDE</strong> Visual Stochastic Calculus <span class="dot status-live">●</span> LIVE</span>
-            <span class="mono"><strong>NEXT</strong> New position opening <span class="dot status-wip">▾</span> IN PROGRESS</span>
-          </div>
-        </div>
 
         <!-- Positions table -->
         <div class="table-wrap">
@@ -247,7 +272,11 @@
                   </div>
                 </td>
                 <td data-i18n="proj.sentiment.type">NLP / Markets</td>
-                <td class="status status-live"><a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+                <td class="status status-live">
+                  <a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard">● <span data-i18n="positions.live">LIVE</span> →</a>
+                  <a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard/tree/main" class="src-link" data-i18n="positions.source">SOURCE</a>
+                  <span class="wake-note" data-i18n="positions.wake">May take ~30 s to wake up</span>
+                </td>
               </tr>
 
               <tr>
@@ -260,7 +289,11 @@
                   </div>
                 </td>
                 <td data-i18n="proj.pea.type">Risk / Portfolio Management</td>
-                <td class="status status-live"><a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+                <td class="status status-live">
+                  <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a>
+                  <a href="https://github.com/nnm-psd/pea-risk-lab" class="src-link" data-i18n="positions.source">SOURCE</a>
+                  <span class="wake-note" data-i18n="positions.wake">May take ~30 s to wake up</span>
+                </td>
               </tr>
 
               <tr>
@@ -273,7 +306,11 @@
                   </div>
                 </td>
                 <td data-i18n="proj.sandbox.type">Strategy / Backtesting</td>
-                <td class="status status-live"><a href="https://strategysimulation-nnm-psd.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+                <td class="status status-live">
+                  <a href="https://strategysimulation-nnm-psd.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a>
+                  <a href="https://github.com/nnm-psd/strategy_simulation" class="src-link" data-i18n="positions.source">SOURCE</a>
+                  <span class="wake-note" data-i18n="positions.wake">May take ~30 s to wake up</span>
+                </td>
               </tr>
 
               <tr>
@@ -286,7 +323,10 @@
                   </div>
                 </td>
                 <td data-i18n="proj.pulse.type">Macro / Nowcasting</td>
-                <td class="status status-live"><a href="https://nnm-psd.github.io/france_economic_pulse/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+                <td class="status status-live">
+                  <a href="https://nnm-psd.github.io/france_economic_pulse/">● <span data-i18n="positions.live">LIVE</span> →</a>
+                  <a href="https://github.com/nnm-psd/france_economic_pulse" class="src-link" data-i18n="positions.source">SOURCE</a>
+                </td>
               </tr>
 
               <tr>
@@ -299,7 +339,10 @@
                   </div>
                 </td>
                 <td data-i18n="proj.distribution.type">Probability / Statistics</td>
-                <td class="status status-live"><a href="https://nnm-psd.github.io/distribution_lab/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+                <td class="status status-live">
+                  <a href="https://nnm-psd.github.io/distribution_lab/">● <span data-i18n="positions.live">LIVE</span> →</a>
+                  <a href="https://github.com/nnm-psd/distribution_lab" class="src-link" data-i18n="positions.source">SOURCE</a>
+                </td>
               </tr>
 
               <tr>
@@ -312,7 +355,10 @@
                   </div>
                 </td>
                 <td data-i18n="proj.stochastic.type">Stochastic Calculus / Learning</td>
-                <td class="status status-live"><a href="https://nnm-psd.github.io/visual_stochastic_calculus/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
+                <td class="status status-live">
+                  <a href="https://nnm-psd.github.io/visual_stochastic_calculus/">● <span data-i18n="positions.live">LIVE</span> →</a>
+                  <a href="https://github.com/nnm-psd/visual_stochastic_calculus" class="src-link" data-i18n="positions.source">SOURCE</a>
+                </td>
               </tr>
 
               <tr>

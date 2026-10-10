@@ -12,14 +12,15 @@ const translations = {
       description: "Quantitative risk analyst and independent builder of finance tools."
     },
     nav: {
-      education: "Education", experience: "Experience", projects: "Projects",
+      education: "Education", experience: "Experience", skills: "Skills", projects: "Projects",
       certifications: "Certifications", competitions: "Competitions",
       theme_dark: "Dark", theme_light: "Light"
     },
     hero: {
       greeting: "Hey, I'm Minh!",
       bio: "I'm a quantitative risk analyst based in Bordeaux, France. Outside of work, I build independent finance tools — backtesting engines and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
-      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
+      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn",
+      link_cv: "CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_EN.pdf"
     },
     education: {
       title: "Education",
@@ -38,13 +39,22 @@ const translations = {
       role1_b1: "Lead the monthly IFRS 9 provisions reporting, ensuring reliability and on-time delivery.",
       role1_b2: "Analyze the Retail portfolio (exposure above €100M), identifying the main risk concentrations.",
       role1_b3: "Run impact simulations on EAD, LGD, and PD.",
-      role1_b4: "Optimize existing reporting tools, making the provisioning process more efficient.",
+      role1_b4: "Optimize existing reporting tools, cutting the reporting process from several days to 2 hours.",
       role1_b5: "Study the risk factors driving PD changes across customer segments.",
       role1_stack: "Tech stack: SAS, Python, VBA, Power BI.",
       role2_title: "Model Risk Analyst",
       role2_date: "May 2024 – Oct 2024",
-      role2: "Developed a Model Risk Rating (MRR) model: data collection, machine learning, hyper-parameter tuning, and continuous optimization.",
+      role2: "Developed a Model Risk Rating (MRR) model used to rank the risk of more than 100 models: data collection, machine learning, hyper-parameter tuning, and continuous optimization.",
       role3_date: "Jun 2023 – Sep 2023"
+    },
+    skills: {
+      title: "Skills",
+      label_prog: "Programming",
+      label_quant: "Quantitative methods",
+      label_tools: "Tools",
+      label_lang: "Languages",
+      quant: "Credit risk (PD, LGD, EAD), IFRS 9 provisioning, model risk, VaR / expected shortfall, Monte Carlo simulation, stochastic calculus, machine learning, credit scorecards (WOE / IV)",
+      lang: "Vietnamese (native), English (full professional), French (full professional)"
     },
     projects: {
       title: "Projects",
@@ -53,7 +63,8 @@ const translations = {
     positions: {
       sym: "Sym", name: "Name", type: "Type", status: "Status",
       live: "LIVE", source: "SOURCE",
-      next_note: "Next position opening soon — every project above links to a live app or its source code."
+      next_note: "Next position opening soon — every project above links to a live app or its source code.",
+      wake: "May take ~30 s to wake up"
     },
     card: { live: "Demo", source: "Source" },
     proj: {
@@ -89,14 +100,15 @@ const translations = {
       description: "Analyste quantitatif des risques et créateur indépendant d'outils financiers."
     },
     nav: {
-      education: "Formation", experience: "Expérience", projects: "Projets",
+      education: "Formation", experience: "Expérience", skills: "Compétences", projects: "Projets",
       certifications: "Certifications", competitions: "Concours",
       theme_dark: "Sombre", theme_light: "Clair"
     },
     hero: {
       greeting: "Salut, je suis Minh !",
       bio: "Je suis analyste quantitatif des risques basé à Bordeaux. En dehors du travail, je développe des outils financiers indépendants — moteurs de backtesting et tableaux de bord de risque de portefeuille. Cette page retrace ma formation, mon expérience et ce que j'ai construit.",
-      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
+      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn",
+      link_cv: "CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_FR.pdf"
     },
     education: {
       title: "Formation",
@@ -115,13 +127,22 @@ const translations = {
       role1_b1: "Pilotage du reporting mensuel des provisions IFRS 9, garantissant fiabilité et respect des délais.",
       role1_b2: "Analyse du portefeuille Retail (exposition supérieure à 100 M€), avec identification des principales concentrations de risque.",
       role1_b3: "Réalisation de simulations d'impact sur l'EAD, la LGD et la PD.",
-      role1_b4: "Optimisation des outils de reporting existants, améliorant l'efficacité du processus de provisionnement.",
+      role1_b4: "Optimisation des outils de reporting existants, réduisant le processus de reporting de plusieurs jours à 2 heures.",
       role1_b5: "Étude des facteurs de risque expliquant l'évolution de la PD selon les segments de clientèle.",
       role1_stack: "Outils : SAS, Python, VBA, Power BI.",
       role2_title: "Analyste Risque de Modèle",
       role2_date: "mai 2024 – oct. 2024",
-      role2: "Développement d'un modèle de Model Risk Rating (MRR) : collecte des données, machine learning, optimisation des hyperparamètres et amélioration continue.",
+      role2: "Développement d'un modèle de Model Risk Rating (MRR) utilisé pour classer le risque de plus de 100 modèles : collecte des données, machine learning, optimisation des hyperparamètres et amélioration continue.",
       role3_date: "juin 2023 – sept. 2023"
+    },
+    skills: {
+      title: "Compétences",
+      label_prog: "Programmation",
+      label_quant: "Méthodes quantitatives",
+      label_tools: "Outils",
+      label_lang: "Langues",
+      quant: "Risque de crédit (PD, LGD, EAD), provisionnement IFRS 9, risque de modèle, VaR / expected shortfall, simulation Monte Carlo, calcul stochastique, machine learning, scorecards de crédit (WOE / IV)",
+      lang: "Vietnamien (langue maternelle), anglais (courant professionnel), français (courant professionnel)"
     },
     projects: {
       title: "Projets",
@@ -130,7 +151,8 @@ const translations = {
     positions: {
       sym: "Sym", name: "Nom", type: "Type", status: "Statut",
       live: "EN LIGNE", source: "CODE SOURCE",
-      next_note: "Prochaine position en préparation — chaque projet ci-dessus renvoie vers une application en ligne ou son code source."
+      next_note: "Prochaine position en préparation — chaque projet ci-dessus renvoie vers une application en ligne ou son code source.",
+      wake: "Peut mettre ~30 s à démarrer"
     },
     card: { live: "Démo", source: "Code source" },
     proj: {
@@ -166,14 +188,15 @@ const translations = {
       description: "Chuyên viên phân tích rủi ro định lượng và người xây dựng độc lập các công cụ tài chính."
     },
     nav: {
-      education: "Học Vấn", experience: "Kinh Nghiệm", projects: "Dự Án",
+      education: "Học Vấn", experience: "Kinh Nghiệm", skills: "Kỹ Năng", projects: "Dự Án",
       certifications: "Chứng Chỉ", competitions: "Cuộc Thi",
       theme_dark: "Tối", theme_light: "Sáng"
     },
     hero: {
       greeting: "Chào, tôi là Minh!",
       bio: "Tôi là chuyên viên phân tích rủi ro định lượng, sống tại Bordeaux, Pháp. Ngoài công việc, tôi xây dựng các công cụ tài chính độc lập — công cụ backtest và bảng điều khiển rủi ro danh mục. Trang này ghi lại học vấn, kinh nghiệm, và những gì tôi đã xây dựng.",
-      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
+      link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn",
+      link_cv: "CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_VI.pdf"
     },
     education: {
       title: "Học Vấn",
@@ -192,13 +215,22 @@ const translations = {
       role1_b1: "Phụ trách báo cáo dự phòng IFRS 9 hằng tháng, đảm bảo độ tin cậy và đúng hạn.",
       role1_b2: "Phân tích danh mục bán lẻ (dư nợ trên 100 triệu €), xác định các điểm tập trung rủi ro chính.",
       role1_b3: "Thực hiện mô phỏng tác động lên EAD, LGD và PD.",
-      role1_b4: "Tối ưu hóa các công cụ báo cáo hiện có, nâng cao hiệu quả quy trình trích lập dự phòng.",
+      role1_b4: "Tối ưu hóa các công cụ báo cáo hiện có, rút ngắn quy trình báo cáo từ vài ngày xuống còn 2 giờ.",
       role1_b5: "Nghiên cứu các yếu tố rủi ro giải thích biến động PD theo từng phân khúc khách hàng.",
       role1_stack: "Công nghệ: SAS, Python, VBA, Power BI.",
       role2_title: "Chuyên Viên Phân Tích Rủi Ro Mô Hình",
       role2_date: "05/2024 – 10/2024",
-      role2: "Xây dựng mô hình Model Risk Rating (MRR): thu thập dữ liệu, học máy, tinh chỉnh siêu tham số và tối ưu hóa liên tục.",
+      role2: "Xây dựng mô hình Model Risk Rating (MRR) dùng để xếp hạng rủi ro của hơn 100 mô hình: thu thập dữ liệu, học máy, tinh chỉnh siêu tham số và tối ưu hóa liên tục.",
       role3_date: "06/2023 – 09/2023"
+    },
+    skills: {
+      title: "Kỹ Năng",
+      label_prog: "Lập Trình",
+      label_quant: "Phương Pháp Định Lượng",
+      label_tools: "Công Cụ",
+      label_lang: "Ngôn Ngữ",
+      quant: "Rủi ro tín dụng (PD, LGD, EAD), trích lập dự phòng IFRS 9, rủi ro mô hình, VaR / expected shortfall, mô phỏng Monte Carlo, giải tích ngẫu nhiên, học máy, thẻ điểm tín dụng (WOE / IV)",
+      lang: "Tiếng Việt (bản ngữ), tiếng Anh (thành thạo trong công việc), tiếng Pháp (thành thạo trong công việc)"
     },
     projects: {
       title: "Dự Án",
@@ -207,7 +239,8 @@ const translations = {
     positions: {
       sym: "Mã", name: "Tên", type: "Loại", status: "Trạng Thái",
       live: "ĐANG HOẠT ĐỘNG", source: "MÃ NGUỒN",
-      next_note: "Vị trí tiếp theo sắp ra mắt — mỗi dự án ở trên đều dẫn đến ứng dụng đang hoạt động hoặc mã nguồn."
+      next_note: "Vị trí tiếp theo sắp ra mắt — mỗi dự án ở trên đều dẫn đến ứng dụng đang hoạt động hoặc mã nguồn.",
+      wake: "Có thể mất ~30 giây để khởi động"
     },
     card: { live: "Demo", source: "Mã nguồn" },
     proj: {
@@ -278,10 +311,14 @@ function applyLanguage(lang) {
 
 function initLanguage() {
   let lang = 'en';
-  try {
-    const saved = localStorage.getItem('preferred-lang');
-    if (saved && translations[saved]) lang = saved;
-  } catch (e) { /* ignore */ }
+  const fromUrl = new URLSearchParams(location.search).get('lang');
+  const fromBrowser = (navigator.language || '').slice(0, 2);
+  let saved = null;
+  try { saved = localStorage.getItem('preferred-lang'); } catch (e) { /* ignore */ }
+
+  if (translations[fromUrl]) lang = fromUrl;
+  else if (translations[saved]) lang = saved;
+  else if (translations[fromBrowser]) lang = fromBrowser;
 
   applyLanguage(lang);
 

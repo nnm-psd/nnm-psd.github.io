@@ -180,32 +180,6 @@ a:hover { border-bottom-color: var(--accent); }
 .item-desc strong { color: var(--ink); }
 .item-links { margin-top: 8px; font-size: 0.88rem; }
 
-/* ============ TICKER TAPE ============ */
-.ticker {
-  margin-top: 24px;
-  overflow: hidden;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 10px 0;
-}
-.ticker-track {
-  display: inline-flex;
-  white-space: nowrap;
-  gap: 28px;
-  font-size: 0.78rem;
-  color: var(--ink-soft);
-  animation: ticker-scroll 26s linear infinite;
-  padding-left: 100%;
-}
-.ticker-track strong { color: var(--ink); }
-@keyframes ticker-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track { animation: none; padding-left: 0; flex-wrap: wrap; white-space: normal; }
-}
-
 .dot { font-size: 0.75em; }
 .status-live, .status-live .dot { color: var(--green); }
 .status-wip, .status-wip .dot { color: var(--amber); }
@@ -275,6 +249,15 @@ a:hover { border-bottom-color: var(--accent); }
   white-space: nowrap;
 }
 .positions .status a { color: inherit; border-bottom: none; }
+.positions .status a.src-link { display: block; margin-top: 4px; color: var(--ink-soft); }
+.positions .status .wake-note {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  white-space: normal;
+}
 .positions .status a:hover { opacity: 0.75; border-bottom: none; }
 
 .positions-note {
@@ -283,6 +266,17 @@ a:hover { border-bottom-color: var(--accent); }
   color: var(--ink-soft);
 }
 .positions-note .dot { margin-right: 4px; }
+
+/* ============ SKILLS ============ */
+.skills {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 12px 20px;
+  margin: 22px 0 0;
+  font-size: 0.95rem;
+}
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; color: var(--ink-soft); }
 
 /* ============ FOOTER ============ */
 .site-footer {
@@ -315,5 +309,51 @@ a:hover { border-bottom-color: var(--accent); }
   .positions th:nth-child(3),
   .positions td:nth-child(3) { display: none; }
   .row-body:has(.row-shot) { grid-template-columns: 1fr; }
+  .skills { grid-template-columns: 1fr; gap: 2px; }
+  .skills dd { margin-bottom: 10px; }
   .row-shot { grid-column: 1; grid-row: auto; width: 160px; margin-top: 10px; }
+}
+/* ============ PRINT / CV PDF ============ */
+.print-only { display: none; }
+
+@media print {
+  @page { size: A4; margin: 14mm; }
+  :root, [data-theme="dark"] {
+    --bg: #FFFFFF; --ink: #1A1A1A; --ink-soft: #444444; --line: #DDDDDD;
+    --accent: #2F5FE0; --green: #1A9E5C; --amber: #9A7B1F;
+  }
+  body { font-size: 10pt; line-height: 1.45; }
+  a { color: var(--ink); }
+
+  .site-header, .hero, .skip-link, #contact, .site-footer, .section-sub,
+  .row-shot, .positions-note, .positions th:nth-child(4), .positions td:nth-child(4) {
+    display: none !important;
+  }
+  .print-only { display: block; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+
+  .cv-name { font-size: 20pt; font-weight: 700; }
+  .cv-role, .cv-contact { color: var(--ink-soft); }
+  .cv-contact a { color: var(--ink-soft); }
+
+  .section { max-width: none; padding: 12pt 0 0; }
+  .section h2 { font-size: 12.5pt; padding-bottom: 3pt; border-bottom: 1px solid var(--line); }
+  .list { margin-top: 4pt; }
+  .section h2 { break-after: avoid; }
+  .item { padding: 4pt 0; border-bottom: none; break-inside: avoid; }
+  .item-head { flex-wrap: nowrap; }
+  .item-head h3, .item h3 { font-size: 10.5pt; }
+  .item-meta { font-size: 9.5pt; margin-top: 1pt; }
+  .item-date { font-size: 9pt; }
+  .item-desc { margin-top: 2pt; font-size: 9.5pt; }
+  .item-desc + .item-desc { margin-top: 1pt; }
+
+  .skills { margin-top: 6pt; grid-template-columns: 150px 1fr; gap: 3pt 14pt; font-size: 9.5pt; }
+
+  .table-wrap { margin-top: 4pt; overflow: visible; }
+  .positions { font-size: 9.5pt; }
+  .positions td { padding: 4pt 10pt 4pt 0; }
+  .positions tr { break-inside: avoid; }
+  .row-body:has(.row-shot) { display: block; }
+  .row-tagline { font-size: 9pt; }
 }
