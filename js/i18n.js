@@ -65,7 +65,8 @@ const translations = {
       live: "LIVE", source: "SOURCE",
       next_note: "Next position opening soon — every project above links to a live app or its source code.",
       wake: "May take ~30 s to wake up",
-      writeup: "WRITE-UP"
+      writeup: "WRITE-UP",
+      earlier: "Earlier projects"
     },
     card: { live: "Demo", source: "Source" },
     proj: {
@@ -154,7 +155,8 @@ const translations = {
       live: "EN LIGNE", source: "CODE SOURCE",
       next_note: "Prochaine position en préparation — chaque projet ci-dessus renvoie vers une application en ligne ou son code source.",
       wake: "Peut mettre ~30 s à démarrer",
-      writeup: "ANALYSE"
+      writeup: "ANALYSE",
+      earlier: "Projets antérieurs"
     },
     card: { live: "Démo", source: "Code source" },
     proj: {
@@ -243,7 +245,8 @@ const translations = {
       live: "ĐANG HOẠT ĐỘNG", source: "MÃ NGUỒN",
       next_note: "Vị trí tiếp theo sắp ra mắt — mỗi dự án ở trên đều dẫn đến ứng dụng đang hoạt động hoặc mã nguồn.",
       wake: "Có thể mất ~30 giây để khởi động",
-      writeup: "BÀI VIẾT"
+      writeup: "BÀI VIẾT",
+      earlier: "Dự án trước đây"
     },
     card: { live: "Demo", source: "Mã nguồn" },
     proj: {

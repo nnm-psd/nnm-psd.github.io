@@ -215,6 +215,11 @@ a:hover { border-bottom-color: var(--accent); }
 .positions td a { color: var(--ink); border-bottom: 1px solid transparent; font-weight: 600; }
 .positions td a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
+.positions .group-row th {
+  padding: 28px 0 8px;
+  border-bottom: 1px solid var(--line);
+}
+
 .row-tagline {
   display: block;
   font-weight: 400;
@@ -380,6 +385,8 @@ a:hover { border-bottom-color: var(--accent); }
   .positions { font-size: 9.5pt; }
   .positions td { padding: 4pt 10pt 4pt 0; }
   .positions tr { break-inside: avoid; }
+  .positions .group-row th { padding: 8pt 0 3pt; }
+  #certifications .list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24pt; }
   .row-body:has(.row-shot) { display: block; }
   .row-tagline { font-size: 9pt; }
 }
@@ -406,6 +413,7 @@ a:hover { border-bottom-color: var(--accent); }
   .cv-compact .positions td { padding: 0.5pt 8pt 0.5pt 0; border-bottom: none; }
   .cv-compact .row-tagline { display: inline; font-size: 8.4pt; }
   .cv-compact .row-tagline::before { content: " — "; }
+  .cv-compact .positions .group-row th { padding: 3pt 0 1pt; border-bottom: none; }
 
   /* certifications and competitions side by side in two columns */
   .cv-compact #certifications .list, .cv-compact #competitions .list {
