@@ -21,6 +21,15 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Set theme before first paint to avoid a light-mode flash -->
+    <script>
+      try {
+        var t = localStorage.getItem('preferred-theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
   </head>
 
   <body>
@@ -38,7 +47,7 @@
           <a href="#experience" data-i18n="nav.experience">Experience</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
           <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
-          <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
         </nav>
       </div>
 
@@ -67,14 +76,13 @@
       ============================================================= -->
       <section id="top" class="hero">
         <div class="hero-top">
-          <img src="profile.jpg" alt="Minh" class="avatar" />
+          <img src="profile-256.jpg" alt="Minh" class="avatar" width="84" height="84" />
           <h1 data-i18n="hero.greeting">Hey, I'm Minh!</h1>
         </div>
 
         <p class="bio" data-i18n="hero.bio">
-          I'm a quantitative risk analyst based in France. Outside of work, I build independent
-          finance tools — backtesting engines, options pricing libraries, and portfolio risk
-          dashboards. This page tracks my education, experience, and the things I've built.
+          I'm a quantitative risk analyst based in Bordeaux, France. Outside of work, I build independent
+          finance tools — backtesting engines and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.
         </p>
 
         <p class="inline-links">
@@ -95,10 +103,10 @@
           <!-- Education entry 1 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Master 2 Advanced Studies and Research in Finance - Research Track (M.Sc. in Finance)]</h3>
+              <h3>Master 2 Advanced Studies and Research in Finance - Research Track (M.Sc. in Finance)</h3>
               <span class="item-date">2023–2024</span>
             </div>
-            <p class="item-meta">[IGR-IAE — Rennes, France]</p>
+            <p class="item-meta">IGR-IAE — Rennes, France</p>
             <p class="item-desc" data-i18n="education.entry1">
               Coursework in quantitative finance, risk management, and financial econometrics. Thesis on Machine Learning in French stock markets under the supervision of Mr. Souleymane LAMINOU ABDOU.
             </p>
@@ -107,10 +115,10 @@
           <!-- Education entry 2 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Msc of Engineering in Applied Mathematics]</h3>
-              <span class="item-date">2019–2023</span>
+              <h3>Msc of Engineering in Applied Mathematics</h3>
+              <span class="item-date">2019–2024</span>
             </div>
-            <p class="item-meta">[INSA de Rennes — Rennes, France]</p>
+            <p class="item-meta">INSA de Rennes — Rennes, France</p>
             <p class="item-desc" data-i18n="education.entry2">
               Coursework in applied mathematics, numerical methods, and optimization. Thesis on the application of Applied Mathematics in Model Risk Management at BNP Paribas.
             </p>
@@ -119,13 +127,22 @@
           <!-- Education entry 3 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Exchange Program in Mathematics Department]</h3>
-              <span class="item-date">2023–2023</span>
+              <h3>Exchange Program in Mathematics Department</h3>
+              <span class="item-date" data-i18n="education.date3">Feb 2023 – Jun 2023</span>
             </div>
-            <p class="item-meta">[Korean Advanced Institute of Science and Technology (KAIST) — Daejeon, South Korea]</p>
+            <p class="item-meta">Korean Advanced Institute of Science and Technology (KAIST) — Daejeon, South Korea</p>
             <p class="item-desc" data-i18n="education.entry3">
               Coursework in Business Intelligence, Data Science, and Bayesian Statistics. GPA: 90.33/100.
             </p>
+          </div>
+
+          <!-- Education entry 4 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>Baccalauréat, Mathematics Option</h3>
+              <span class="item-date">2016–2019</span>
+            </div>
+            <p class="item-meta" data-i18n="education.school4">High School for Gifted Students, Hanoi University of Education — Hanoi, Vietnam</p>
           </div>
 
         </div>
@@ -143,29 +160,34 @@
           <div class="item">
             <div class="item-head">
               <h3 data-i18n="experience.role1_title">Quantitative Risk Analyst</h3>
-              <span class="item-date">2024–Present</span>
+              <span class="item-date" data-i18n="experience.role1_date">Nov 2024 – Present</span>
             </div>
-            <p class="item-meta">BNP Paribas — Bordeaux, France</p>
-            <p class="item-desc" data-i18n="experience.role1_b1">
-              Replace with a concrete responsibility — e.g. market or counterparty risk
-              modeling, stress testing, reporting.
-            </p>
-            <p class="item-desc" data-i18n="experience.role1_b2">
-              Replace with a second achievement — tooling built, process improved, or model
-              validated.
-            </p>
+            <p class="item-meta">BNP Paribas · Risk Architecture — Bordeaux, France</p>
+            <p class="item-desc" data-i18n="experience.role1_b1">Lead the monthly IFRS 9 provisions reporting, ensuring reliability and on-time delivery.</p>
+            <p class="item-desc" data-i18n="experience.role1_b2">Analyze the Retail portfolio (exposure above €100M), identifying the main risk concentrations.</p>
+            <p class="item-desc" data-i18n="experience.role1_b3">Run impact simulations on EAD, LGD, and PD.</p>
+            <p class="item-desc" data-i18n="experience.role1_b4">Optimize existing reporting tools, making the provisioning process more efficient.</p>
+            <p class="item-desc" data-i18n="experience.role1_b5">Study the risk factors driving PD changes across customer segments.</p>
+            <p class="item-desc" data-i18n="experience.role1_stack">Tech stack: SAS, Python, VBA, Power BI.</p>
           </div>
 
           <!-- Experience entry 2 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Previous role title]</h3>
-              <span class="item-date">20XX–20XX</span>
+              <h3 data-i18n="experience.role2_title">Model Risk Analyst</h3>
+              <span class="item-date" data-i18n="experience.role2_date">May 2024 – Oct 2024</span>
             </div>
-            <p class="item-meta">[Company name] — [City]</p>
-            <p class="item-desc" data-i18n="experience.role2">
-              Replace with a short summary of this earlier position.
-            </p>
+            <p class="item-meta">BNP Paribas — Bordeaux, France</p>
+            <p class="item-desc" data-i18n="experience.role2">Developed a Model Risk Rating (MRR) model: data collection, machine learning, hyper-parameter tuning, and continuous optimization.</p>
+          </div>
+
+          <!-- Experience entry 3 -->
+          <div class="item">
+            <div class="item-head">
+              <h3>Data Scientist</h3>
+              <span class="item-date" data-i18n="experience.role3_date">Jun 2023 – Sep 2023</span>
+            </div>
+            <p class="item-meta">NexGuard (now part of NAGRA) — Rennes, France</p>
           </div>
 
         </div>
@@ -186,10 +208,16 @@
             <span class="mono"><strong>SENT</strong> Financial Sentiment Dashboard <span class="dot status-live">●</span> LIVE</span>
             <span class="mono"><strong>RISK</strong> PEA Risk Lab <span class="dot status-live">●</span> LIVE</span>
             <span class="mono"><strong>SIM</strong> Strategy Simulation <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>PULSE</strong> France Economic Pulse <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>DIST</strong> Distribution Lab <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>SDE</strong> Visual Stochastic Calculus <span class="dot status-live">●</span> LIVE</span>
             <span class="mono"><strong>NEXT</strong> New position opening <span class="dot status-wip">▾</span> IN PROGRESS</span>
             <span class="mono"><strong>SENT</strong> Financial Sentiment Dashboard <span class="dot status-live">●</span> LIVE</span>
             <span class="mono"><strong>RISK</strong> PEA Risk Lab <span class="dot status-live">●</span> LIVE</span>
             <span class="mono"><strong>SIM</strong> Strategy Simulation <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>PULSE</strong> France Economic Pulse <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>DIST</strong> Distribution Lab <span class="dot status-live">●</span> LIVE</span>
+            <span class="mono"><strong>SDE</strong> Visual Stochastic Calculus <span class="dot status-live">●</span> LIVE</span>
             <span class="mono"><strong>NEXT</strong> New position opening <span class="dot status-wip">▾</span> IN PROGRESS</span>
           </div>
         </div>
@@ -210,8 +238,11 @@
               <tr>
                 <td class="mono sym">SENT</td>
                 <td>
-                  <a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard" data-i18n="proj.sentiment.title">Financial Sentiment Dashboard</a>
-                  <span class="row-tagline" data-i18n="proj.sentiment.tagline">Market data + financial news, scored locally with VADER &amp; FinBERT — no API cost.</span>
+                  <div class="row-body">
+                    <a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard" data-i18n="proj.sentiment.title">Financial Sentiment Dashboard</a>
+                    <span class="row-tagline" data-i18n="proj.sentiment.tagline">Market data + financial news, scored locally with VADER &amp; FinBERT — no API cost.</span>
+                    <a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/sentiment.webp" alt="" width="960" height="600" loading="lazy" /></a>
+                  </div>
                 </td>
                 <td data-i18n="proj.sentiment.type">NLP / Markets</td>
                 <td class="status status-live"><a href="https://huggingface.co/spaces/nnm-psd-01/sentiment_dashboard">● <span data-i18n="positions.live">LIVE</span> →</a></td>
@@ -220,8 +251,11 @@
               <tr>
                 <td class="mono sym">RISK</td>
                 <td>
-                  <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/" data-i18n="proj.pea.title">PEA Risk Lab</a>
-                  <span class="row-tagline" data-i18n="proj.pea.tagline">Market data + risk management for French equities and UCITS ETFs.</span>
+                  <div class="row-body">
+                    <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/" data-i18n="proj.pea.title">PEA Risk Lab</a>
+                    <span class="row-tagline" data-i18n="proj.pea.tagline">Market data + risk management for French equities and UCITS ETFs.</span>
+                    <a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/pea.webp" alt="" width="960" height="600" loading="lazy" /></a>
+                  </div>
                 </td>
                 <td data-i18n="proj.pea.type">Risk / Portfolio Management</td>
                 <td class="status status-live"><a href="https://pea-risk-lab-9aurszyarffstsuzfuzwse.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
@@ -230,51 +264,65 @@
               <tr>
                 <td class="mono sym">SIM</td>
                 <td>
-                  <a href="https://strategysimulation-nnm-psd.streamlit.app/" data-i18n="proj.sandbox.title">Strategy Simulation</a>
-                  <span class="row-tagline" data-i18n="proj.sandbox.tagline">Market data + strategy testing — DCA, momentum, and Monte Carlo backtests.</span>
+                  <div class="row-body">
+                    <a href="https://strategysimulation-nnm-psd.streamlit.app/" data-i18n="proj.sandbox.title">Strategy Simulation</a>
+                    <span class="row-tagline" data-i18n="proj.sandbox.tagline">Market data + strategy testing — DCA, momentum, and Monte Carlo backtests.</span>
+                    <a href="https://strategysimulation-nnm-psd.streamlit.app/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/sandbox.webp" alt="" width="960" height="600" loading="lazy" /></a>
+                  </div>
                 </td>
                 <td data-i18n="proj.sandbox.type">Strategy / Backtesting</td>
                 <td class="status status-live"><a href="https://strategysimulation-nnm-psd.streamlit.app/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
               </tr>
 
               <tr>
-                <td class="mono sym">OPT</td>
+                <td class="mono sym">PULSE</td>
                 <td>
-                  <a href="#" data-i18n="proj.options.title">Options Analytics Lab</a>
-                  <span class="row-tagline" data-i18n="proj.options.tagline">BSM, binomial trees, and Bjerksund-Stensland pricing, cross-checked.</span>
+                  <div class="row-body">
+                    <a href="https://nnm-psd.github.io/france_economic_pulse/" data-i18n="proj.pulse.title">France Economic Pulse</a>
+                    <span class="row-tagline" data-i18n="proj.pulse.tagline">Open-data nowcast of French industrial production, refit and published daily.</span>
+                    <a href="https://nnm-psd.github.io/france_economic_pulse/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/pulse.webp" alt="" width="960" height="600" loading="lazy" /></a>
+                  </div>
                 </td>
-                <td data-i18n="proj.options.type">Derivatives Pricing</td>
-                <td class="status status-wip"><span>▾ <span data-i18n="positions.source">SOURCE</span></span></td>
+                <td data-i18n="proj.pulse.type">Macro / Nowcasting</td>
+                <td class="status status-live"><a href="https://nnm-psd.github.io/france_economic_pulse/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
               </tr>
 
               <tr>
-                <td class="mono sym">VAL</td>
+                <td class="mono sym">DIST</td>
                 <td>
-                  <a href="#" data-i18n="proj.valuation.title">European IB Valuation Pipeline</a>
-                  <span class="row-tagline" data-i18n="proj.valuation.tagline">ESEF / iXBRL filings parsed directly into DCF, comps, LBO models.</span>
+                  <div class="row-body">
+                    <a href="https://nnm-psd.github.io/distribution_lab/" data-i18n="proj.distribution.title">Distribution Lab</a>
+                    <span class="row-tagline" data-i18n="proj.distribution.tagline">16 probability distributions to explore, fit to data by MLE, and run through Monte Carlo VaR scenarios.</span>
+                    <a href="https://nnm-psd.github.io/distribution_lab/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/distribution.webp" alt="" width="960" height="600" loading="lazy" /></a>
+                  </div>
                 </td>
-                <td data-i18n="proj.valuation.type">Valuation / IFRS</td>
-                <td class="status status-wip"><span>▾ <span data-i18n="positions.source">SOURCE</span></span></td>
+                <td data-i18n="proj.distribution.type">Probability / Statistics</td>
+                <td class="status status-live"><a href="https://nnm-psd.github.io/distribution_lab/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
               </tr>
 
               <tr>
-                <td class="mono sym">MACRO</td>
+                <td class="mono sym">SDE</td>
                 <td>
-                  <a href="#" data-i18n="proj.macro.title">Macro-to-Sector Rotation Pipeline</a>
-                  <span class="row-tagline" data-i18n="proj.macro.tagline">FRED macro signals driving a walk-forward sector rotation backtest.</span>
+                  <div class="row-body">
+                    <a href="https://nnm-psd.github.io/visual_stochastic_calculus/" data-i18n="proj.stochastic.title">Visual Stochastic Calculus</a>
+                    <span class="row-tagline" data-i18n="proj.stochastic.tagline">From Brownian motion to Black–Scholes, Heston, and diffusion models — 11 interactive chapters with runnable Python.</span>
+                    <a href="https://nnm-psd.github.io/visual_stochastic_calculus/" class="row-shot" tabindex="-1" aria-hidden="true"><img src="assets/projects/stochastic.webp" alt="" width="960" height="600" loading="lazy" /></a>
+                  </div>
                 </td>
-                <td data-i18n="proj.macro.type">Macro / Sector Rotation</td>
-                <td class="status status-wip"><span>▾ <span data-i18n="positions.source">SOURCE</span></span></td>
+                <td data-i18n="proj.stochastic.type">Stochastic Calculus / Learning</td>
+                <td class="status status-live"><a href="https://nnm-psd.github.io/visual_stochastic_calculus/">● <span data-i18n="positions.live">LIVE</span> →</a></td>
               </tr>
 
               <tr>
-                <td class="mono sym">CPP</td>
+                <td class="mono sym">PD</td>
                 <td>
-                  <a href="#" data-i18n="proj.cpp.title">C++ Performance Engine</a>
-                  <span class="row-tagline" data-i18n="proj.cpp.tagline">A pybind11 port of the backtest core, benchmarked against Python.</span>
+                  <div class="row-body">
+                    <a href="https://github.com/nnm-psd/give_me_some_credit" data-i18n="proj.credit.title">PD Credit Scorecard</a>
+                    <span class="row-tagline" data-i18n="proj.credit.tagline">WOE-binned logistic scorecard on 150k Kaggle loans — test AUC 0.85, Gini 0.70.</span>
+                  </div>
                 </td>
-                <td data-i18n="proj.cpp.type">Performance Engineering</td>
-                <td class="status status-wip"><span>△ <span data-i18n="positions.in_progress">IN PROGRESS</span></span></td>
+                <td data-i18n="proj.credit.type">Credit Risk / Scoring</td>
+                <td class="status status-wip"><a href="https://github.com/nnm-psd/give_me_some_credit">▾ <span data-i18n="positions.source">SOURCE</span> →</a></td>
               </tr>
 
             </tbody>
@@ -283,7 +331,7 @@
 
         <p class="positions-note">
           <span class="dot status-wip">····</span>
-          <span data-i18n="positions.next_note">Next position opening soon — open positions above are live, not screenshots.</span>
+          <span data-i18n="positions.next_note">Next position opening soon — every project above links to a live app or its source code.</span>
         </p>
       </section>
 
@@ -295,136 +343,68 @@
 
         <div class="list">
 
-          <!-- Certification 1 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Certification name]</h3>
-              <span class="item-date">20XX</span>
+              <h3><a href="https://www.credly.com/badges/84fb1f11-d11d-49ba-b060-bc1c59823406/public_url">SAS Programming 1: Essentials</a></h3>
+              <span class="item-date" data-i18n="certifications.date1">Dec 2024</span>
             </div>
-            <p class="item-meta">[Issuing organization]</p>
-            <p class="item-desc" data-i18n="certifications.entry1">
-              Replace with what this certification covers, and a credential ID or
-              verification link if you have one.
-            </p>
+            <p class="item-meta">SAS</p>
           </div>
 
-          <!-- Certification 2 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Certification name]</h3>
-              <span class="item-date">20XX</span>
+              <h3><a href="https://verify.skilljar.com/c/rr9m3zkcs2ja">Core Designer Certificate</a></h3>
+              <span class="item-date" data-i18n="certifications.date2">Jul 2024</span>
             </div>
-            <p class="item-meta">[Issuing organization]</p>
-            <p class="item-desc" data-i18n="certifications.entry2">
-              Replace with what this certification covers, and a credential ID or
-              verification link if you have one.
-            </p>
+            <p class="item-meta">Dataiku Academy</p>
           </div>
 
-          <!-- Certification 3 -->
           <div class="item">
             <div class="item-head">
-              <h3>[Certification name]</h3>
-              <span class="item-date">20XX</span>
+              <h3><a href="https://portal.bloombergforeducation.com/certificates/n5KnRSBd3Mmncgi5prVDf9dA">Bloomberg Market Concepts</a></h3>
+              <span class="item-date" data-i18n="certifications.date3">Nov 2023</span>
             </div>
-            <p class="item-meta">[Issuing organization]</p>
-            <p class="item-desc" data-i18n="certifications.entry3">
-              Replace with what this certification covers, and a credential ID or
-              verification link if you have one.
-            </p>
+            <p class="item-meta">Bloomberg for Education</p>
+          </div>
+
+          <div class="item">
+            <div class="item-head">
+              <h3><a href="https://coursera.org/verify/3F2SQH65J5RW">Neural Networks and Deep Learning</a></h3>
+              <span class="item-date" data-i18n="certifications.date4">Apr 2023</span>
+            </div>
+            <p class="item-meta">DeepLearning.AI · Coursera</p>
+          </div>
+
+          <div class="item">
+            <h3 data-i18n="certifications.amf">AMF Certification</h3>
+            <p class="item-meta">Autorité des marchés financiers (AMF)</p>
           </div>
 
         </div>
       </section>
 
       <!-- ============================================================
-           FINANCIAL PORTFOLIO — case studies: problem / approach / result
+           COMPETITIONS
       ============================================================= -->
-      <section id="portfolio" class="section" data-reveal>
-        <h2 data-i18n="portfolio.title">Financial Portfolio</h2>
-        <p class="section-sub" data-i18n="portfolio.sub">
-          A closer look at three flagship tools — the problem each one solves, the method
-          behind it, and what it produces.
-        </p>
+      <section id="competitions" class="section" data-reveal>
+        <h2 data-i18n="competitions.title">Competitions</h2>
 
         <div class="list">
 
-          <!-- Case study: Portfolio Strategy Sandbox -->
           <div class="item">
-            <h3 data-i18n="case.sandbox.title">Portfolio Strategy Sandbox</h3>
-            <p class="item-desc">
-              <strong data-i18n="case.label_problem">Problem</strong> —
-              <span data-i18n="case.sandbox.problem">
-                Comparing DCA, momentum, and dual-momentum strategies under realistic,
-                correlated market conditions rather than idealized assumptions.
-              </span>
-            </p>
-            <p class="item-desc">
-              <strong data-i18n="case.label_approach">Approach</strong> —
-              <span data-i18n="case.sandbox.approach">
-                Block-bootstrap Monte Carlo simulation that preserves cross-asset
-                correlation, instead of a standard geometric Brownian motion model.
-              </span>
-            </p>
-            <p class="item-desc">
-              <strong data-i18n="case.label_result">Result</strong> —
-              <span data-i18n="case.sandbox.result">
-                A fan chart of simulated outcomes with percentile bands and the probability
-                of reaching a target value.
-              </span>
-            </p>
+            <div class="item-head">
+              <h3>Cod'INSA</h3>
+              <span class="item-date">2024</span>
+            </div>
+            <p class="item-meta" data-i18n="competitions.codinsa">Programming competition between the schools of the INSA Group in France</p>
           </div>
 
-          <!-- Case study: PEA Risk Lab -->
           <div class="item">
-            <h3 data-i18n="case.pea.title">PEA Risk Lab</h3>
-            <p class="item-desc">
-              <strong data-i18n="case.label_problem">Problem</strong> —
-              <span data-i18n="case.pea.problem">
-                Most retail dashboards show performance but not risk concentration across a
-                French equity and ETF portfolio.
-              </span>
-            </p>
-            <p class="item-desc">
-              <strong data-i18n="case.label_approach">Approach</strong> —
-              <span data-i18n="case.pea.approach">
-                VaR, CVaR, beta, and a min-variance optimizer over a CAC 40 and UCITS ETF
-                universe, solved via SLSQP.
-              </span>
-            </p>
-            <p class="item-desc">
-              <strong data-i18n="case.label_result">Result</strong> —
-              <span data-i18n="case.pea.result">
-                A single diversification-ratio score as the headline view, with full risk
-                decomposition underneath.
-              </span>
-            </p>
-          </div>
-
-          <!-- Case study: Options Analytics Lab -->
-          <div class="item">
-            <h3 data-i18n="case.options.title">Options Analytics Lab</h3>
-            <p class="item-desc">
-              <strong data-i18n="case.label_problem">Problem</strong> —
-              <span data-i18n="case.options.problem">
-                Single-model option pricers can misprice American-style options around large
-                discrete dividends.
-              </span>
-            </p>
-            <p class="item-desc">
-              <strong data-i18n="case.label_approach">Approach</strong> —
-              <span data-i18n="case.options.approach">
-                Three pricing engines — BSM, CRR binomial trees, and Bjerksund-Stensland —
-                cross-checked through a shared diagnostics layer.
-              </span>
-            </p>
-            <p class="item-desc">
-              <strong data-i18n="case.options.result_label">Known limit</strong> —
-              <span data-i18n="case.options.result">
-                The escrowed-dividend method still understates early-exercise premium ahead
-                of large dividends — documented as a next upgrade.
-              </span>
-            </p>
+            <div class="item-head">
+              <h3 data-i18n="competitions.homc_title">Hanoi Open Mathematics Competition (HOMC)</h3>
+              <span class="item-date">2015</span>
+            </div>
+            <p class="item-meta" data-i18n="competitions.homc_prize">First Prize</p>
           </div>
 
         </div>

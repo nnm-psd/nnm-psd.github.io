@@ -13,26 +13,36 @@ const translations = {
     },
     nav: {
       education: "Education", experience: "Experience", projects: "Projects",
-      certifications: "Certifications", portfolio: "Portfolio",
+      certifications: "Certifications", competitions: "Competitions",
       theme_dark: "Dark", theme_light: "Light"
     },
     hero: {
       greeting: "Hey, I'm Minh!",
-      bio: "I'm a quantitative risk analyst based in France. Outside of work, I build independent finance tools — backtesting engines, options pricing libraries, and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
+      bio: "I'm a quantitative risk analyst based in Bordeaux, France. Outside of work, I build independent finance tools — backtesting engines and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
       title: "Education",
+      date3: "Feb 2023 – Jun 2023",
       entry1: "Coursework in quantitative finance, risk management, and financial econometrics. Thesis on Machine Learning in French stock markets under the supervision of Mr. Souleymane LAMINOU ABDOU.",
       entry2: "Coursework in applied mathematics, numerical methods, and optimization. Thesis on the application of Applied Mathematics in Model Risk Management at BNP Paribas.",
-      entry3: "Coursework in Business Intelligence, Data Science, and Bayesian Statistics."
+      entry3: "Coursework in Business Intelligence, Data Science, and Bayesian Statistics. GPA: 90.33/100.",
+      school4: "High School for Gifted Students, Hanoi University of Education — Hanoi, Vietnam"
     },
     experience: {
       title: "Experience",
       role1_title: "Quantitative Risk Analyst",
-      role1_b1: "Replace with a concrete responsibility — e.g. market or counterparty risk modeling, stress testing, reporting.",
-      role1_b2: "Replace with a second achievement — tooling built, process improved, or model validated.",
-      role2: "Replace with a short summary of this earlier position."
+      role1_date: "Nov 2024 – Present",
+      role1_b1: "Lead the monthly IFRS 9 provisions reporting, ensuring reliability and on-time delivery.",
+      role1_b2: "Analyze the Retail portfolio (exposure above €100M), identifying the main risk concentrations.",
+      role1_b3: "Run impact simulations on EAD, LGD, and PD.",
+      role1_b4: "Optimize existing reporting tools, making the provisioning process more efficient.",
+      role1_b5: "Study the risk factors driving PD changes across customer segments.",
+      role1_stack: "Tech stack: SAS, Python, VBA, Power BI.",
+      role2_title: "Model Risk Analyst",
+      role2_date: "May 2024 – Oct 2024",
+      role2: "Developed a Model Risk Rating (MRR) model: data collection, machine learning, hyper-parameter tuning, and continuous optimization.",
+      role3_date: "Jun 2023 – Sep 2023"
     },
     projects: {
       title: "Projects",
@@ -40,50 +50,29 @@ const translations = {
     },
     positions: {
       sym: "Sym", name: "Name", type: "Type", status: "Status",
-      live: "LIVE", source: "SOURCE", in_progress: "IN PROGRESS",
-      next_note: "Next position opening soon — open positions above are live, not screenshots."
+      live: "LIVE", source: "SOURCE",
+      next_note: "Next position opening soon — every project above links to a live app or its source code."
     },
     card: { live: "Demo", source: "Source" },
     proj: {
       sandbox: { title: "Strategy Simulation", tagline: "Market data + strategy testing — DCA, momentum, and Monte Carlo backtests.", type: "Strategy / Backtesting", desc: "Backtesting and Monte Carlo simulation for DCA, momentum, and dual-momentum strategies, using block-bootstrap resampling to preserve cross-asset correlation, with a fan-chart view and probability-of-target output.", stack: "Python · Streamlit · Monte Carlo · pandas" },
       pea: { title: "PEA Risk Lab", tagline: "Market data + risk management for French equities and UCITS ETFs.", type: "Risk / Portfolio Management", desc: "Market and counterparty risk analysis for French equities and UCITS ETFs — VaR, CVaR, beta, Sharpe ratio, max drawdown, a minimum-variance optimizer, and a diversification-ratio readout as the focal view.", stack: "Python · SLSQP · yfinance" },
-      options: { title: "Options Analytics Lab", tagline: "BSM, binomial trees, and Bjerksund-Stensland pricing, cross-checked.", type: "Derivatives Pricing", desc: "A four-layer options pricing platform: Black-Scholes-Merton, Cox-Ross-Rubinstein binomial trees with escrowed dividends, and Bjerksund-Stensland 2002, plus a diagnostics and attribution layer.", stack: "Python · BSM · Binomial trees · FRED API" },
-      valuation: { title: "European IB Valuation Pipeline", tagline: "ESEF / iXBRL filings parsed directly into DCF, comps, LBO models.", type: "Valuation / IFRS", desc: "A no-LLM valuation pipeline that parses ESEF / iXBRL filings directly with Arelle, running DCF, comparable companies, LBO, and precedent transaction models, with results stored in SQLite.", stack: "Python · Arelle · SQLAlchemy" },
-      macro: { title: "Macro-to-Sector Rotation Pipeline", tagline: "FRED macro signals driving a walk-forward sector rotation backtest.", type: "Macro / Sector Rotation", desc: "A sector-rotation signal built on free FRED macro series, with walk-forward backtesting that handles publication lag and block-bootstrap significance testing on the resulting Sharpe ratio.", stack: "Python · FRED · Sector ETFs" },
-      cpp: { title: "C++ Performance Engine", tagline: "A pybind11 port of the backtest core, benchmarked against Python.", type: "Performance Engineering", desc: "A pybind11 port of the backtest and Monte Carlo core to C++, with a Streamlit toggle to switch between the Python and C++ engines and benchmark them side by side.", stack: "C++ · pybind11 · CMake" },
+      pulse: { title: "France Economic Pulse", tagline: "Open-data nowcast of French industrial production, refit and published daily.", type: "Macro / Nowcasting", desc: "A nowcast of French industrial production from open data (RTE electricity, INSEE, ECB, BODACC, Open-Meteo), validated by walk-forward backtest and rebuilt every day by GitHub Actions into a bilingual FR/EN site.", stack: "Python · uv · GitHub Actions" },
+      distribution: { title: "Distribution Lab", tagline: "16 probability distributions to explore, fit to data by MLE, and run through Monte Carlo VaR scenarios.", type: "Probability / Statistics", desc: "An interactive site for probability distributions in quant work: 16 tunable distributions, 20 relationships checked by simulation, maximum-likelihood fitting ranked by AIC/BIC, Monte Carlo VaR / expected-shortfall scenarios, and hypothesis-test planning with power analysis.", stack: "JavaScript · SVG · KaTeX" },
+      stochastic: { title: "Visual Stochastic Calculus", tagline: "From Brownian motion to Black–Scholes, Heston, and diffusion models — 11 interactive chapters with runnable Python.", type: "Stochastic Calculus / Learning", desc: "An interactive introduction to stochastic calculus: Brownian motion, the Itô integral and lemma, SDEs, Black–Scholes, Girsanov, Feynman–Kac, Heston, and diffusion models, with a simulation for every idea, in-browser Python (Pyodide), and 30 quant interview questions.", stack: "JavaScript · Canvas · Pyodide · KaTeX" },
+      credit: { title: "PD Credit Scorecard", tagline: "WOE-binned logistic scorecard on 150k Kaggle loans — test AUC 0.85, Gini 0.70.", type: "Credit Risk / Scoring", desc: "A probability-of-default scorecard on Kaggle's Give Me Some Credit data: WOE binning with IV-based feature selection, a logistic regression scaled to points (PDO 20, 600 at 50:1 odds), calibration checks, and a Streamlit app to explore bins and simulate scores.", stack: "Python · scikit-learn · Streamlit" },
       sentiment: { title: "Financial Sentiment Dashboard", tagline: "Market data + financial news, scored locally with VADER & FinBERT — no API cost.", type: "NLP / Markets", desc: "A cost-free sentiment analysis tool combining local FinBERT inference with VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
     },
     certifications: {
       title: "Certifications",
-      entry1: "Replace with what this certification covers, and a credential ID or verification link if you have one.",
-      entry2: "Replace with what this certification covers, and a credential ID or verification link if you have one.",
-      entry3: "Replace with what this certification covers, and a credential ID or verification link if you have one."
+      date1: "Dec 2024", date2: "Jul 2024", date3: "Nov 2023", date4: "Apr 2023",
+      amf: "AMF Certification"
     },
-    portfolio: {
-      title: "Financial Portfolio",
-      sub: "A closer look at three flagship tools — the problem each one solves, the method behind it, and what it produces."
-    },
-    case: {
-      label_problem: "Problem", label_approach: "Approach", label_result: "Result",
-      sandbox: {
-        title: "Portfolio Strategy Sandbox",
-        problem: "Comparing DCA, momentum, and dual-momentum strategies under realistic, correlated market conditions rather than idealized assumptions.",
-        approach: "Block-bootstrap Monte Carlo simulation that preserves cross-asset correlation, instead of a standard geometric Brownian motion model.",
-        result: "A fan chart of simulated outcomes with percentile bands and the probability of reaching a target value."
-      },
-      pea: {
-        title: "PEA Risk Lab",
-        problem: "Most retail dashboards show performance but not risk concentration across a French equity and ETF portfolio.",
-        approach: "VaR, CVaR, beta, and a min-variance optimizer over a CAC 40 and UCITS ETF universe, solved via SLSQP.",
-        result: "A single diversification-ratio score as the headline view, with full risk decomposition underneath."
-      },
-      options: {
-        title: "Options Analytics Lab",
-        problem: "Single-model option pricers can misprice American-style options around large discrete dividends.",
-        approach: "Three pricing engines — BSM, CRR binomial trees, and Bjerksund-Stensland — cross-checked through a shared diagnostics layer.",
-        result_label: "Known limit",
-        result: "The escrowed-dividend method still understates early-exercise premium ahead of large dividends — documented as a next upgrade."
-      }
+    competitions: {
+      title: "Competitions",
+      codinsa: "Programming competition between the schools of the INSA Group in France",
+      homc_title: "Hanoi Open Mathematics Competition (HOMC)",
+      homc_prize: "First Prize"
     },
     contact: {
       title: "Contact",
@@ -99,25 +88,36 @@ const translations = {
     },
     nav: {
       education: "Formation", experience: "Expérience", projects: "Projets",
-      certifications: "Certifications", portfolio: "Portfolio",
+      certifications: "Certifications", competitions: "Concours",
       theme_dark: "Sombre", theme_light: "Clair"
     },
     hero: {
       greeting: "Salut, je suis Minh !",
-      bio: "Je suis analyste quantitatif des risques basé à Paris. En dehors du travail, je développe des outils financiers indépendants — moteurs de backtesting, bibliothèques de pricing d'options, tableaux de bord de risque de portefeuille. Cette page retrace ma formation, mon expérience et ce que j'ai construit.",
+      bio: "Je suis analyste quantitatif des risques basé à Bordeaux. En dehors du travail, je développe des outils financiers indépendants — moteurs de backtesting et tableaux de bord de risque de portefeuille. Cette page retrace ma formation, mon expérience et ce que j'ai construit.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
       title: "Formation",
-      entry1: "À remplacer par le domaine d'étude, le sujet de mémoire ou les cours pertinents — méthodes quantitatives, pricing des produits dérivés, statistiques.",
-      entry2: "À remplacer par une courte description — mentions, projets pertinents ou échanges universitaires."
+      date3: "févr. 2023 – juin 2023",
+      entry1: "Cours de finance quantitative, gestion des risques et économétrie financière. Mémoire sur le Machine Learning appliqué aux marchés actions français, sous la direction de M. Souleymane LAMINOU ABDOU.",
+      entry2: "Cours de mathématiques appliquées, méthodes numériques et optimisation. Mémoire sur l'application des mathématiques appliquées à la gestion du risque de modèle chez BNP Paribas.",
+      entry3: "Cours de Business Intelligence, science des données et statistiques bayésiennes. Moyenne : 90,33/100.",
+      school4: "Lycée d'excellence de l'École Normale Supérieure de Hanoï — Hanoï, Vietnam"
     },
     experience: {
       title: "Expérience",
-      role1_title: "Analyste Quantitatif des Risques",
-      role1_b1: "À remplacer par une responsabilité concrète — par ex. modélisation du risque de marché ou de contrepartie, stress tests, reporting.",
-      role1_b2: "À remplacer par une seconde réalisation — outil développé, processus amélioré ou modèle validé.",
-      role2: "À remplacer par un court résumé de ce poste précédent."
+      role1_title: "Analyste Risque Quantitatif",
+      role1_date: "nov. 2024 – aujourd'hui",
+      role1_b1: "Pilotage du reporting mensuel des provisions IFRS 9, garantissant fiabilité et respect des délais.",
+      role1_b2: "Analyse du portefeuille Retail (exposition supérieure à 100 M€), avec identification des principales concentrations de risque.",
+      role1_b3: "Réalisation de simulations d'impact sur l'EAD, la LGD et la PD.",
+      role1_b4: "Optimisation des outils de reporting existants, améliorant l'efficacité du processus de provisionnement.",
+      role1_b5: "Étude des facteurs de risque expliquant l'évolution de la PD selon les segments de clientèle.",
+      role1_stack: "Outils : SAS, Python, VBA, Power BI.",
+      role2_title: "Analyste Risque de Modèle",
+      role2_date: "mai 2024 – oct. 2024",
+      role2: "Développement d'un modèle de Model Risk Rating (MRR) : collecte des données, machine learning, optimisation des hyperparamètres et amélioration continue.",
+      role3_date: "juin 2023 – sept. 2023"
     },
     projects: {
       title: "Projets",
@@ -125,50 +125,29 @@ const translations = {
     },
     positions: {
       sym: "Sym", name: "Nom", type: "Type", status: "Statut",
-      live: "EN LIGNE", source: "CODE SOURCE", in_progress: "EN COURS",
-      next_note: "Prochaine position en préparation — les positions ci-dessus sont en ligne, pas de simples captures d'écran."
+      live: "EN LIGNE", source: "CODE SOURCE",
+      next_note: "Prochaine position en préparation — chaque projet ci-dessus renvoie vers une application en ligne ou son code source."
     },
     card: { live: "Démo", source: "Code source" },
     proj: {
       sandbox: { title: "Strategy Simulation", tagline: "Données de marché + tests de stratégie — DCA, momentum et backtests Monte Carlo.", type: "Stratégie / Backtesting", desc: "Backtesting et simulation Monte Carlo pour les stratégies DCA, momentum et dual-momentum, avec un block-bootstrap préservant la corrélation entre actifs, une vue en éventail et une probabilité d'atteindre un objectif.", stack: "Python · Streamlit · Monte Carlo · pandas" },
       pea: { title: "PEA Risk Lab", tagline: "Données de marché + gestion des risques pour actions françaises et ETF UCITS.", type: "Risque / Gestion de portefeuille", desc: "Analyse du risque de marché et de contrepartie pour les actions françaises et ETF UCITS — VaR, CVaR, bêta, ratio de Sharpe, drawdown maximal, un optimiseur de variance minimale et un ratio de diversification comme indicateur principal.", stack: "Python · SLSQP · yfinance" },
-      options: { title: "Options Analytics Lab", tagline: "BSM, arbres binomiaux et pricing Bjerksund-Stensland, recoupés entre eux.", type: "Pricing de produits dérivés", desc: "Une plateforme de pricing d'options à quatre couches : Black-Scholes-Merton, arbres binomiaux Cox-Ross-Rubinstein avec dividendes en dépôt, et Bjerksund-Stensland 2002, avec une couche de diagnostic et d'attribution.", stack: "Python · BSM · Arbres binomiaux · FRED API" },
-      valuation: { title: "Pipeline de valorisation IB européen", tagline: "Dépôts ESEF / iXBRL analysés directement en modèles DCF, comparables, LBO.", type: "Valorisation / IFRS", desc: "Un pipeline de valorisation sans IA générative qui analyse directement les dépôts ESEF / iXBRL avec Arelle, exécutant des modèles DCF, comparables boursiers, LBO et transactions précédentes, avec stockage SQLite.", stack: "Python · Arelle · SQLAlchemy" },
-      macro: { title: "Pipeline de rotation macro-sectorielle", tagline: "Signaux macro FRED pilotant un backtest de rotation sectorielle walk-forward.", type: "Macro / Rotation sectorielle", desc: "Un signal de rotation sectorielle basé sur des séries macroéconomiques FRED gratuites, avec un backtesting walk-forward gérant le décalage de publication et un test de significativité du ratio de Sharpe par block-bootstrap.", stack: "Python · FRED · ETF sectoriels" },
-      cpp: { title: "Moteur de performance C++", tagline: "Un portage en C++ via pybind11 du cœur de backtesting, comparé au Python.", type: "Ingénierie de performance", desc: "Un portage en C++ via pybind11 du cœur de backtesting et de Monte Carlo, avec un bouton Streamlit pour basculer entre les moteurs Python et C++ et les comparer.", stack: "C++ · pybind11 · CMake" },
+      pulse: { title: "France Economic Pulse", tagline: "Nowcast en open data de la production industrielle française, réestimé et publié chaque jour.", type: "Macro / Nowcasting", desc: "Un nowcast de la production industrielle française à partir de données ouvertes (RTE, INSEE, BCE, BODACC, Open-Meteo), validé par backtest walk-forward et reconstruit chaque jour par GitHub Actions en un site bilingue FR/EN.", stack: "Python · uv · GitHub Actions" },
+      distribution: { title: "Distribution Lab", tagline: "16 lois de probabilité à explorer, ajuster aux données par maximum de vraisemblance et soumettre à des scénarios Monte Carlo de VaR.", type: "Probabilités / Statistiques", desc: "Un site interactif sur les lois de probabilité en finance quantitative : 16 lois paramétrables, 20 relations vérifiées par simulation, ajustement par maximum de vraisemblance classé par AIC/BIC, scénarios Monte Carlo de VaR / expected shortfall et planification de tests d'hypothèse avec analyse de puissance.", stack: "JavaScript · SVG · KaTeX" },
+      stochastic: { title: "Visual Stochastic Calculus", tagline: "Du mouvement brownien à Black–Scholes, Heston et aux modèles de diffusion — 11 chapitres interactifs avec du Python exécutable.", type: "Calcul stochastique / Pédagogie", desc: "Une introduction interactive au calcul stochastique : mouvement brownien, intégrale et lemme d'Itô, EDS, Black–Scholes, Girsanov, Feynman–Kac, Heston et modèles de diffusion, avec une simulation pour chaque notion, du Python exécutable dans le navigateur (Pyodide) et 30 questions d'entretien quant.", stack: "JavaScript · Canvas · Pyodide · KaTeX" },
+      credit: { title: "Scorecard de crédit PD", tagline: "Scorecard logistique avec binning WOE sur 150 000 prêts Kaggle — AUC test 0,85, Gini 0,70.", type: "Risque de crédit / Scoring", desc: "Une scorecard de probabilité de défaut sur les données Kaggle Give Me Some Credit : binning WOE avec sélection des variables par IV, régression logistique convertie en points (PDO 20, 600 à une cote de 50:1), contrôles de calibration et une application Streamlit pour explorer les classes et simuler des scores.", stack: "Python · scikit-learn · Streamlit" },
       sentiment: { title: "Tableau de bord de sentiment financier", tagline: "Données de marché + actualités financières, analysées localement avec VADER et FinBERT — sans coût d'API.", type: "NLP / Marchés", desc: "Un outil d'analyse de sentiment gratuit combinant FinBERT en local et VADER, alimenté par des flux RSS gratuits et des données de marché, déployé sur Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
     },
     certifications: {
       title: "Certifications",
-      entry1: "À remplacer par ce que couvre cette certification, avec un identifiant ou un lien de vérification si disponible.",
-      entry2: "À remplacer par ce que couvre cette certification, avec un identifiant ou un lien de vérification si disponible.",
-      entry3: "À remplacer par ce que couvre cette certification, avec un identifiant ou un lien de vérification si disponible."
+      date1: "déc. 2024", date2: "juil. 2024", date3: "nov. 2023", date4: "avr. 2023",
+      amf: "Certification AMF"
     },
-    portfolio: {
-      title: "Portfolio Financier",
-      sub: "Un regard approfondi sur trois outils phares — le problème que chacun résout, la méthode utilisée, et ce qu'il produit."
-    },
-    case: {
-      label_problem: "Problème", label_approach: "Approche", label_result: "Résultat",
-      sandbox: {
-        title: "Portfolio Strategy Sandbox",
-        problem: "Comparer les stratégies DCA, momentum et dual-momentum dans des conditions de marché réalistes et corrélées plutôt que sous des hypothèses idéalisées.",
-        approach: "Simulation Monte Carlo par block-bootstrap préservant la corrélation entre actifs, plutôt qu'un modèle classique de mouvement brownien géométrique.",
-        result: "Un graphique en éventail des résultats simulés avec bandes de percentiles et probabilité d'atteindre un objectif."
-      },
-      pea: {
-        title: "PEA Risk Lab",
-        problem: "La plupart des tableaux de bord grand public montrent la performance mais pas la concentration du risque d'un portefeuille d'actions et ETF français.",
-        approach: "VaR, CVaR, bêta et un optimiseur de variance minimale sur un univers CAC 40 et ETF UCITS, résolu par SLSQP.",
-        result: "Un score unique de ratio de diversification comme vue principale, avec la décomposition complète du risque en dessous."
-      },
-      options: {
-        title: "Options Analytics Lab",
-        problem: "Les pricers d'options à modèle unique peuvent mal évaluer les options américaines autour de dividendes discrets importants.",
-        approach: "Trois moteurs de pricing — BSM, arbres binomiaux CRR et Bjerksund-Stensland — recoupés via une couche de diagnostic commune.",
-        result_label: "Limite connue",
-        result: "La méthode des dividendes en dépôt sous-estime encore la prime d'exercice anticipé avant de larges dividendes — documenté comme prochaine amélioration."
-      }
+    competitions: {
+      title: "Concours",
+      codinsa: "Concours de programmation entre les écoles du Groupe INSA",
+      homc_title: "Hanoi Open Mathematics Competition (HOMC)",
+      homc_prize: "Premier prix"
     },
     contact: {
       title: "Contact",
@@ -184,25 +163,36 @@ const translations = {
     },
     nav: {
       education: "Học Vấn", experience: "Kinh Nghiệm", projects: "Dự Án",
-      certifications: "Chứng Chỉ", portfolio: "Danh Mục",
+      certifications: "Chứng Chỉ", competitions: "Cuộc Thi",
       theme_dark: "Tối", theme_light: "Sáng"
     },
     hero: {
       greeting: "Chào, tôi là Minh!",
-      bio: "Tôi là chuyên viên phân tích rủi ro định lượng, sống tại Paris. Ngoài công việc, tôi xây dựng các công cụ tài chính độc lập — công cụ backtest, thư viện định giá quyền chọn, và bảng điều khiển rủi ro danh mục. Trang này ghi lại học vấn, kinh nghiệm, và những gì tôi đã xây dựng.",
+      bio: "Tôi là chuyên viên phân tích rủi ro định lượng, sống tại Bordeaux, Pháp. Ngoài công việc, tôi xây dựng các công cụ tài chính độc lập — công cụ backtest và bảng điều khiển rủi ro danh mục. Trang này ghi lại học vấn, kinh nghiệm, và những gì tôi đã xây dựng.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn"
     },
     education: {
       title: "Học Vấn",
-      entry1: "Thay bằng hướng chuyên môn, đề tài luận văn, hoặc các môn học liên quan — phương pháp định lượng, định giá sản phẩm phái sinh, thống kê.",
-      entry2: "Thay bằng mô tả ngắn — thành tích học tập, dự án liên quan, hoặc chương trình trao đổi."
+      date3: "02/2023 – 06/2023",
+      entry1: "Các môn học về tài chính định lượng, quản trị rủi ro và kinh tế lượng tài chính. Luận văn về Machine Learning trên thị trường chứng khoán Pháp dưới sự hướng dẫn của ông Souleymane LAMINOU ABDOU.",
+      entry2: "Các môn học về toán ứng dụng, phương pháp số và tối ưu hóa. Luận văn về ứng dụng toán học trong quản trị rủi ro mô hình tại BNP Paribas.",
+      entry3: "Các môn học về Business Intelligence, Khoa học dữ liệu và Thống kê Bayes. Điểm trung bình (GPA): 90,33/100.",
+      school4: "Chuyên Đại học Sư phạm Hà Nội — Hà Nội, Việt Nam"
     },
     experience: {
       title: "Kinh Nghiệm",
       role1_title: "Chuyên Viên Phân Tích Rủi Ro Định Lượng",
-      role1_b1: "Thay bằng một trách nhiệm cụ thể — ví dụ: mô hình hóa rủi ro thị trường hoặc rủi ro đối tác, kiểm tra căng thẳng, báo cáo.",
-      role1_b2: "Thay bằng một thành tích khác — công cụ đã xây dựng, quy trình đã cải thiện, hoặc mô hình đã được kiểm định.",
-      role2: "Thay bằng mô tả ngắn cho vị trí trước đây."
+      role1_date: "11/2024 – nay",
+      role1_b1: "Phụ trách báo cáo dự phòng IFRS 9 hằng tháng, đảm bảo độ tin cậy và đúng hạn.",
+      role1_b2: "Phân tích danh mục bán lẻ (dư nợ trên 100 triệu €), xác định các điểm tập trung rủi ro chính.",
+      role1_b3: "Thực hiện mô phỏng tác động lên EAD, LGD và PD.",
+      role1_b4: "Tối ưu hóa các công cụ báo cáo hiện có, nâng cao hiệu quả quy trình trích lập dự phòng.",
+      role1_b5: "Nghiên cứu các yếu tố rủi ro giải thích biến động PD theo từng phân khúc khách hàng.",
+      role1_stack: "Công nghệ: SAS, Python, VBA, Power BI.",
+      role2_title: "Chuyên Viên Phân Tích Rủi Ro Mô Hình",
+      role2_date: "05/2024 – 10/2024",
+      role2: "Xây dựng mô hình Model Risk Rating (MRR): thu thập dữ liệu, học máy, tinh chỉnh siêu tham số và tối ưu hóa liên tục.",
+      role3_date: "06/2023 – 09/2023"
     },
     projects: {
       title: "Dự Án",
@@ -210,50 +200,29 @@ const translations = {
     },
     positions: {
       sym: "Mã", name: "Tên", type: "Loại", status: "Trạng Thái",
-      live: "ĐANG HOẠT ĐỘNG", source: "MÃ NGUỒN", in_progress: "ĐANG PHÁT TRIỂN",
-      next_note: "Vị trí tiếp theo sắp ra mắt — các vị trí trên đều đang hoạt động thật, không phải ảnh chụp màn hình."
+      live: "ĐANG HOẠT ĐỘNG", source: "MÃ NGUỒN",
+      next_note: "Vị trí tiếp theo sắp ra mắt — mỗi dự án ở trên đều dẫn đến ứng dụng đang hoạt động hoặc mã nguồn."
     },
     card: { live: "Demo", source: "Mã nguồn" },
     proj: {
       sandbox: { title: "Strategy Simulation", tagline: "Dữ liệu thị trường + kiểm thử chiến lược — DCA, momentum và backtest Monte Carlo.", type: "Chiến Lược / Backtest", desc: "Backtest và mô phỏng Monte Carlo cho các chiến lược DCA, momentum và dual-momentum, dùng block-bootstrap để giữ tương quan giữa tài sản, kèm biểu đồ quạt và xác suất đạt mục tiêu.", stack: "Python · Streamlit · Monte Carlo · pandas" },
       pea: { title: "PEA Risk Lab", tagline: "Dữ liệu thị trường + quản trị rủi ro cho cổ phiếu Pháp và ETF UCITS.", type: "Rủi Ro / Quản Lý Danh Mục", desc: "Phân tích rủi ro thị trường và đối tác cho cổ phiếu Pháp và ETF UCITS — VaR, CVaR, beta, hệ số Sharpe, mức sụt giảm tối đa, bộ tối ưu hóa phương sai tối thiểu và chỉ số đa dạng hóa làm trọng tâm.", stack: "Python · SLSQP · yfinance" },
-      options: { title: "Options Analytics Lab", tagline: "BSM, cây nhị thức và định giá Bjerksund-Stensland, được đối chiếu với nhau.", type: "Định Giá Phái Sinh", desc: "Nền tảng định giá quyền chọn bốn lớp: Black-Scholes-Merton, cây nhị thức Cox-Ross-Rubinstein với cổ tức ký quỹ, và Bjerksund-Stensland 2002, cùng lớp chẩn đoán và phân tích đóng góp.", stack: "Python · BSM · Cây nhị thức · FRED API" },
-      valuation: { title: "Pipeline Định Giá IB Châu Âu", tagline: "Hồ sơ ESEF / iXBRL được phân tích trực tiếp thành các mô hình DCF, so sánh, LBO.", type: "Định Giá / IFRS", desc: "Pipeline định giá không dùng AI tạo sinh, phân tích trực tiếp hồ sơ ESEF / iXBRL bằng Arelle, chạy các mô hình DCF, công ty so sánh, LBO và giao dịch tiền lệ, lưu bằng SQLite.", stack: "Python · Arelle · SQLAlchemy" },
-      macro: { title: "Pipeline Xoay Vòng Ngành Theo Vĩ Mô", tagline: "Tín hiệu vĩ mô FRED dẫn dắt backtest xoay vòng ngành theo walk-forward.", type: "Vĩ Mô / Xoay Vòng Ngành", desc: "Tín hiệu xoay vòng ngành dựa trên dữ liệu vĩ mô FRED miễn phí, kèm backtest walk-forward xử lý độ trễ công bố và kiểm định ý nghĩa hệ số Sharpe bằng block-bootstrap.", stack: "Python · FRED · ETF ngành" },
-      cpp: { title: "Bộ Xử Lý Hiệu Năng C++", tagline: "Phần lõi backtest được chuyển sang C++ qua pybind11, đối chiếu với Python.", type: "Kỹ Thuật Hiệu Năng", desc: "Chuyển phần lõi backtest và Monte Carlo sang C++ qua pybind11, kèm nút chuyển đổi Streamlit giữa Python và C++ để so sánh hiệu năng.", stack: "C++ · pybind11 · CMake" },
+      pulse: { title: "France Economic Pulse", tagline: "Dự báo tức thời (nowcast) sản xuất công nghiệp Pháp từ dữ liệu mở, cập nhật hằng ngày.", type: "Vĩ Mô / Dự Báo Tức Thời", desc: "Mô hình nowcast sản xuất công nghiệp Pháp từ dữ liệu mở (RTE, INSEE, ECB, BODACC, Open-Meteo), được kiểm định bằng backtest walk-forward và tự động xây dựng lại mỗi ngày bằng GitHub Actions thành trang web song ngữ Pháp/Anh.", stack: "Python · uv · GitHub Actions" },
+      distribution: { title: "Distribution Lab", tagline: "16 phân phối xác suất để khám phá, khớp với dữ liệu bằng MLE và chạy các kịch bản VaR Monte Carlo.", type: "Xác Suất / Thống Kê", desc: "Trang web tương tác về phân phối xác suất trong tài chính định lượng: 16 phân phối với tham số tùy chỉnh, 20 mối quan hệ được kiểm chứng bằng mô phỏng, khớp dữ liệu bằng ước lượng hợp lý cực đại xếp hạng theo AIC/BIC, kịch bản Monte Carlo cho VaR / expected shortfall, và thiết kế kiểm định giả thuyết với phân tích độ mạnh.", stack: "JavaScript · SVG · KaTeX" },
+      stochastic: { title: "Visual Stochastic Calculus", tagline: "Từ chuyển động Brown đến Black–Scholes, Heston và mô hình khuếch tán — 11 chương tương tác kèm mã Python chạy được.", type: "Giải Tích Ngẫu Nhiên / Học Tập", desc: "Giới thiệu trực quan về giải tích ngẫu nhiên: chuyển động Brown, tích phân và bổ đề Itô, phương trình vi phân ngẫu nhiên, Black–Scholes, Girsanov, Feynman–Kac, Heston và mô hình khuếch tán, mỗi khái niệm đều có mô phỏng, Python chạy ngay trên trình duyệt (Pyodide) và 30 câu hỏi phỏng vấn quant.", stack: "JavaScript · Canvas · Pyodide · KaTeX" },
+      credit: { title: "Thẻ Điểm Tín Dụng PD", tagline: "Thẻ điểm hồi quy logistic với phân nhóm WOE trên 150.000 khoản vay Kaggle — AUC kiểm tra 0,85, Gini 0,70.", type: "Rủi Ro Tín Dụng / Chấm Điểm", desc: "Thẻ điểm xác suất vỡ nợ trên dữ liệu Kaggle Give Me Some Credit: phân nhóm WOE với lựa chọn biến theo IV, hồi quy logistic quy đổi ra điểm (PDO 20, 600 điểm ở tỷ lệ 50:1), kiểm tra hiệu chuẩn, và ứng dụng Streamlit để khám phá các nhóm và mô phỏng điểm.", stack: "Python · scikit-learn · Streamlit" },
       sentiment: { title: "Bảng Điều Khiển Tâm Lý Thị Trường", tagline: "Dữ liệu thị trường + tin tức tài chính, phân tích cục bộ bằng VADER và FinBERT — không tốn chi phí API.", type: "NLP / Thị Trường", desc: "Công cụ phân tích tâm lý miễn phí kết hợp FinBERT cục bộ và VADER, dùng dữ liệu RSS miễn phí và dữ liệu thị trường, triển khai trên Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
     },
     certifications: {
       title: "Chứng Chỉ",
-      entry1: "Thay bằng nội dung chứng chỉ này bao quát, kèm mã chứng chỉ hoặc liên kết xác minh nếu có.",
-      entry2: "Thay bằng nội dung chứng chỉ này bao quát, kèm mã chứng chỉ hoặc liên kết xác minh nếu có.",
-      entry3: "Thay bằng nội dung chứng chỉ này bao quát, kèm mã chứng chỉ hoặc liên kết xác minh nếu có."
+      date1: "12/2024", date2: "07/2024", date3: "11/2023", date4: "04/2023",
+      amf: "Chứng Chỉ AMF"
     },
-    portfolio: {
-      title: "Danh Mục Tài Chính",
-      sub: "Phân tích sâu hơn về ba công cụ chủ lực — vấn đề mỗi công cụ giải quyết, phương pháp thực hiện, và kết quả tạo ra."
-    },
-    case: {
-      label_problem: "Vấn Đề", label_approach: "Phương Pháp", label_result: "Kết Quả",
-      sandbox: {
-        title: "Portfolio Strategy Sandbox",
-        problem: "So sánh các chiến lược DCA, momentum và dual-momentum trong điều kiện thị trường thực tế, có tương quan, thay vì giả định lý tưởng hóa.",
-        approach: "Mô phỏng Monte Carlo bằng block-bootstrap giữ nguyên tương quan giữa các tài sản, thay vì mô hình chuyển động Brown hình học thông thường.",
-        result: "Biểu đồ quạt thể hiện các kết quả mô phỏng với dải phần trăm và xác suất đạt được giá trị mục tiêu."
-      },
-      pea: {
-        title: "PEA Risk Lab",
-        problem: "Hầu hết bảng điều khiển dành cho nhà đầu tư cá nhân chỉ hiển thị hiệu suất mà không cho thấy mức độ tập trung rủi ro trong danh mục cổ phiếu và ETF Pháp.",
-        approach: "VaR, CVaR, beta và bộ tối ưu hóa phương sai tối thiểu trên bộ cổ phiếu CAC 40 và ETF UCITS, giải bằng SLSQP.",
-        result: "Một chỉ số đa dạng hóa duy nhất làm điểm nhìn chính, kèm phân tích rủi ro chi tiết phía dưới."
-      },
-      options: {
-        title: "Options Analytics Lab",
-        problem: "Các công cụ định giá quyền chọn chỉ dùng một mô hình có thể định giá sai quyền chọn kiểu Mỹ khi có cổ tức rời rạc lớn.",
-        approach: "Ba mô hình định giá — BSM, cây nhị thức CRR và Bjerksund-Stensland — được đối chiếu qua một lớp chẩn đoán chung.",
-        result_label: "Hạn chế đã biết",
-        result: "Phương pháp cổ tức ký quỹ vẫn đánh giá thấp phần bù thực hiện sớm trước các đợt chia cổ tức lớn — được ghi lại như hướng cải thiện tiếp theo."
-      }
+    competitions: {
+      title: "Cuộc Thi",
+      codinsa: "Cuộc thi lập trình giữa các trường thuộc hệ thống INSA tại Pháp",
+      homc_title: "Kỳ thi Olympic Toán học Hà Nội mở rộng (HOMC)",
+      homc_prize: "Giải Nhất"
     },
     contact: {
       title: "Liên Hệ",
