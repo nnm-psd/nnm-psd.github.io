@@ -387,7 +387,7 @@ a:hover { border-bottom-color: var(--accent); }
 /* 1-page CV: tools/build_cv.py adds .cv-compact to <html> before printing */
 @page compact { size: A4; margin: 8mm 11mm; }
 @media print {
-  .cv-compact body { page: compact; font-size: 8.6pt; line-height: 1.27; }
+  .cv-compact body { page: compact; font-size: 8.6pt; line-height: 1.24; }
   .cv-compact .cv-name { font-size: 15pt; }
   .cv-compact .cv-role, .cv-compact .cv-contact { font-size: 8.6pt; }
   .cv-compact .section { padding-top: 4pt; }
