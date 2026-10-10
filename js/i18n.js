@@ -27,7 +27,9 @@ const translations = {
       entry1: "Coursework in quantitative finance, risk management, and financial econometrics. Thesis on Machine Learning in French stock markets under the supervision of Mr. Souleymane LAMINOU ABDOU.",
       entry2: "Coursework in applied mathematics, numerical methods, and optimization. Thesis on the application of Applied Mathematics in Model Risk Management at BNP Paribas.",
       entry3: "Coursework in Business Intelligence, Data Science, and Bayesian Statistics. GPA: 90.33/100.",
-      school4: "High School for Gifted Students, Hanoi University of Education — Hanoi, Vietnam"
+      school4: "High School for Gifted Students, Hanoi University of Education — Hanoi, Vietnam",
+      honors1: "Ranked first in class, graduated with the mention Très Bien (highest honors).",
+      honors4: "Highest Baccalauréat score among all students in Hanoi."
     },
     experience: {
       title: "Experience",
@@ -102,7 +104,9 @@ const translations = {
       entry1: "Cours de finance quantitative, gestion des risques et économétrie financière. Mémoire sur le Machine Learning appliqué aux marchés actions français, sous la direction de M. Souleymane LAMINOU ABDOU.",
       entry2: "Cours de mathématiques appliquées, méthodes numériques et optimisation. Mémoire sur l'application des mathématiques appliquées à la gestion du risque de modèle chez BNP Paribas.",
       entry3: "Cours de Business Intelligence, science des données et statistiques bayésiennes. Moyenne : 90,33/100.",
-      school4: "Lycée d'excellence de l'École Normale Supérieure de Hanoï — Hanoï, Vietnam"
+      school4: "Lycée d'excellence de l'École Normale Supérieure de Hanoï — Hanoï, Vietnam",
+      honors1: "Major de promotion, diplômé avec la mention Très Bien.",
+      honors4: "Meilleur score au baccalauréat parmi tous les élèves de Hanoï."
     },
     experience: {
       title: "Expérience",
@@ -177,7 +181,9 @@ const translations = {
       entry1: "Các môn học về tài chính định lượng, quản trị rủi ro và kinh tế lượng tài chính. Luận văn về Machine Learning trên thị trường chứng khoán Pháp dưới sự hướng dẫn của ông Souleymane LAMINOU ABDOU.",
       entry2: "Các môn học về toán ứng dụng, phương pháp số và tối ưu hóa. Luận văn về ứng dụng toán học trong quản trị rủi ro mô hình tại BNP Paribas.",
       entry3: "Các môn học về Business Intelligence, Khoa học dữ liệu và Thống kê Bayes. Điểm trung bình (GPA): 90,33/100.",
-      school4: "Chuyên Đại học Sư phạm Hà Nội — Hà Nội, Việt Nam"
+      school4: "Chuyên Đại học Sư phạm Hà Nội — Hà Nội, Việt Nam",
+      honors1: "Thủ khoa của khóa, tốt nghiệp loại Xuất sắc (mention Très Bien).",
+      honors4: "Thủ khoa kỳ thi tốt nghiệp THPT toàn thành phố Hà Nội."
     },
     experience: {
       title: "Kinh Nghiệm",
