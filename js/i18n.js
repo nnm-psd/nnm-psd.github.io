@@ -13,7 +13,7 @@ const translations = {
     },
     nav: {
       education: "Education", experience: "Experience", skills: "Skills", projects: "Projects",
-      certifications: "Certifications", competitions: "Competitions",
+      certifications: "Certifications", competitions: "Competitions", contact: "Contact",
       theme_dark: "Dark", theme_light: "Light"
     },
     hero: {
@@ -21,7 +21,7 @@ const translations = {
       bio: "I'm a quantitative risk analyst based in Bordeaux, France. Outside of work, I build independent finance tools — backtesting engines and portfolio risk dashboards. This page tracks my education, experience, and the things I've built.",
       now: "Currently learning: derivatives and option pricing.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn",
-      link_cv: "CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_EN.pdf"
+      link_cv: "Download CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_EN.pdf"
     },
     education: {
       title: "Education",
@@ -79,7 +79,7 @@ const translations = {
       sentiment: { title: "Financial Sentiment Dashboard", tagline: "Market data + financial news, scored locally with VADER & FinBERT — no API cost.", type: "NLP / Markets", desc: "A cost-free sentiment analysis tool combining local FinBERT inference with VADER, fed by free RSS feeds and market data, deployed on Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
     },
     certifications: {
-      title: "Certifications",
+      title: "Certifications", verify: "Verify ↗",
       date1: "Dec 2024", date2: "Jul 2024", date3: "Nov 2023", date4: "Apr 2023",
       amf: "AMF Certification"
     },
@@ -93,7 +93,7 @@ const translations = {
       title: "Contact",
       sub: "Open to conversations about quantitative finance, risk tooling, or collaboration."
     },
-    footer: { note: "Made by Minh. View source on GitHub." }
+    footer: { note: "Made by Ngoc Minh NGUYEN.", source: "View source on GitHub" }
   },
 
   fr: {
@@ -103,7 +103,7 @@ const translations = {
     },
     nav: {
       education: "Formation", experience: "Expérience", skills: "Compétences", projects: "Projets",
-      certifications: "Certifications", competitions: "Concours",
+      certifications: "Certifications", competitions: "Concours", contact: "Contact",
       theme_dark: "Sombre", theme_light: "Clair"
     },
     hero: {
@@ -111,7 +111,7 @@ const translations = {
       bio: "Je suis analyste quantitatif des risques basé à Bordeaux. En dehors du travail, je développe des outils financiers indépendants — moteurs de backtesting et tableaux de bord de risque de portefeuille. Cette page retrace ma formation, mon expérience et ce que j'ai construit.",
       now: "En ce moment, j'approfondis les produits dérivés et le pricing d'options.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn",
-      link_cv: "CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_FR.pdf"
+      link_cv: "Télécharger le CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_FR.pdf"
     },
     education: {
       title: "Formation",
@@ -155,7 +155,7 @@ const translations = {
       live: "EN LIGNE", source: "CODE SOURCE",
       next_note: "Prochaine position en préparation — chaque projet ci-dessus renvoie vers une application en ligne ou son code source.",
       wake: "Peut mettre ~30 s à démarrer",
-      writeup: "ANALYSE",
+      writeup: "ANALYSE (EN)",
       earlier: "Projets antérieurs"
     },
     card: { live: "Démo", source: "Code source" },
@@ -169,7 +169,7 @@ const translations = {
       sentiment: { title: "Tableau de bord de sentiment financier", tagline: "Données de marché + actualités financières, analysées localement avec VADER et FinBERT — sans coût d'API.", type: "NLP / Marchés", desc: "Un outil d'analyse de sentiment gratuit combinant FinBERT en local et VADER, alimenté par des flux RSS gratuits et des données de marché, déployé sur Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
     },
     certifications: {
-      title: "Certifications",
+      title: "Certifications", verify: "Vérifier ↗",
       date1: "déc. 2024", date2: "juil. 2024", date3: "nov. 2023", date4: "avr. 2023",
       amf: "Certification AMF"
     },
@@ -183,7 +183,7 @@ const translations = {
       title: "Contact",
       sub: "Ouvert aux échanges sur la finance quantitative, les outils de gestion des risques ou la collaboration."
     },
-    footer: { note: "Conçu par Minh. Voir le code source sur GitHub." }
+    footer: { note: "Conçu par Ngoc Minh NGUYEN.", source: "Voir le code source sur GitHub" }
   },
 
   vi: {
@@ -193,7 +193,7 @@ const translations = {
     },
     nav: {
       education: "Học Vấn", experience: "Kinh Nghiệm", skills: "Kỹ Năng", projects: "Dự Án",
-      certifications: "Chứng Chỉ", competitions: "Cuộc Thi",
+      certifications: "Chứng Chỉ", competitions: "Cuộc Thi", contact: "Liên Hệ",
       theme_dark: "Tối", theme_light: "Sáng"
     },
     hero: {
@@ -201,7 +201,7 @@ const translations = {
       bio: "Tôi là chuyên viên phân tích rủi ro định lượng, sống tại Bordeaux, Pháp. Ngoài công việc, tôi xây dựng các công cụ tài chính độc lập — công cụ backtest và bảng điều khiển rủi ro danh mục. Trang này ghi lại học vấn, kinh nghiệm, và những gì tôi đã xây dựng.",
       now: "Hiện tôi đang học về sản phẩm phái sinh và định giá quyền chọn.",
       link_email: "Email", link_github: "GitHub", link_linkedin: "LinkedIn",
-      link_cv: "CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_VI.pdf"
+      link_cv: "Tải CV (PDF)", cv_file: "cv/Ngoc_Minh_NGUYEN_CV_VI.pdf"
     },
     education: {
       title: "Học Vấn",
@@ -245,7 +245,7 @@ const translations = {
       live: "ĐANG HOẠT ĐỘNG", source: "MÃ NGUỒN",
       next_note: "Vị trí tiếp theo sắp ra mắt — mỗi dự án ở trên đều dẫn đến ứng dụng đang hoạt động hoặc mã nguồn.",
       wake: "Có thể mất ~30 giây để khởi động",
-      writeup: "BÀI VIẾT",
+      writeup: "BÀI VIẾT (EN)",
       earlier: "Dự án trước đây"
     },
     card: { live: "Demo", source: "Mã nguồn" },
@@ -259,7 +259,7 @@ const translations = {
       sentiment: { title: "Bảng Điều Khiển Tâm Lý Thị Trường", tagline: "Dữ liệu thị trường + tin tức tài chính, phân tích cục bộ bằng VADER và FinBERT — không tốn chi phí API.", type: "NLP / Thị Trường", desc: "Công cụ phân tích tâm lý miễn phí kết hợp FinBERT cục bộ và VADER, dùng dữ liệu RSS miễn phí và dữ liệu thị trường, triển khai trên Hugging Face Spaces.", stack: "FinBERT · VADER · Hugging Face" }
     },
     certifications: {
-      title: "Chứng Chỉ",
+      title: "Chứng Chỉ", verify: "Xác minh ↗",
       date1: "12/2024", date2: "07/2024", date3: "11/2023", date4: "04/2023",
       amf: "Chứng Chỉ AMF"
     },
@@ -273,7 +273,7 @@ const translations = {
       title: "Liên Hệ",
       sub: "Luôn sẵn sàng trao đổi về tài chính định lượng, công cụ quản trị rủi ro, hoặc hợp tác."
     },
-    footer: { note: "Được xây dựng bởi Minh. Xem mã nguồn trên GitHub." }
+    footer: { note: "Được xây dựng bởi Ngoc Minh NGUYEN.", source: "Xem mã nguồn trên GitHub" }
   }
 
 };
@@ -302,7 +302,9 @@ function applyLanguage(lang) {
   document.documentElement.lang = lang;
 
   document.querySelectorAll('.lang-toggle .toggle-btn').forEach(btn => {
-    btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
+    const active = btn.getAttribute('data-lang') === lang;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', active);
   });
 
   // Keep the theme button label in sync with the new language

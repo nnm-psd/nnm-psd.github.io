@@ -65,6 +65,7 @@
 
     <!-- Set theme before first paint to avoid a light-mode flash -->
     <script>
+      document.documentElement.classList.add('js');
       try {
         var t = localStorage.getItem('preferred-theme') ||
           (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -97,32 +98,32 @@
       <div class="header-row">
         <a href="#top" class="logo">Minh</a>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Sections">
           <a href="#education" data-i18n="nav.education">Education</a>
           <a href="#experience" data-i18n="nav.experience">Experience</a>
           <a href="#skills" data-i18n="nav.skills">Skills</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
           <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
           <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
-      </div>
 
-      <div class="header-row header-controls">
-        <div class="toggle-group lang-toggle" role="group" aria-label="Language">
-          <button type="button" data-lang="en" class="toggle-btn is-active">EN</button>
-          <button type="button" data-lang="fr" class="toggle-btn">FR</button>
-          <button type="button" data-lang="vi" class="toggle-btn">VI</button>
+        <div class="header-controls">
+          <div class="toggle-group lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="en" class="toggle-btn is-active" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" class="toggle-btn" aria-pressed="false">FR</button>
+            <button type="button" data-lang="vi" class="toggle-btn" aria-pressed="false">VI</button>
+          </div>
+
+          <button
+            type="button"
+            class="toggle-btn theme-toggle"
+            id="theme-toggle"
+            data-i18n="nav.theme_dark"
+          >
+            Dark
+          </button>
         </div>
-
-        <button
-          type="button"
-          class="toggle-btn theme-toggle"
-          id="theme-toggle"
-          data-i18n="nav.theme_dark"
-          aria-label="Toggle light/dark theme"
-        >
-          Dark
-        </button>
       </div>
     </header>
 
@@ -146,8 +147,8 @@
         <p class="inline-links">
           <a href="mailto:minhnn238@gmail.com" data-i18n="hero.link_email">Email</a> ·
           <a href="https://github.com/nnm-psd" data-i18n="hero.link_github">GitHub</a> ·
-          <a href="https://linkedin.com/in/minhnn238/en/" data-i18n="hero.link_linkedin">LinkedIn</a> ·
-          <a href="cv/Ngoc_Minh_NGUYEN_CV_EN.pdf" data-i18n="hero.link_cv" data-i18n-attr="href:hero.cv_file" data-goatcounter-click="cv-download" data-goatcounter-title="CV download" download>CV (PDF)</a>
+          <a href="https://linkedin.com/in/minhnn238/en/" data-i18n="hero.link_linkedin">LinkedIn</a>
+          <a href="cv/Ngoc_Minh_NGUYEN_CV_EN.pdf" class="btn-cv" data-i18n="hero.link_cv" data-i18n-attr="href:hero.cv_file" data-goatcounter-click="cv-download" data-goatcounter-title="CV download" download>Download CV (PDF)</a>
         </p>
       </section>
 
@@ -435,7 +436,7 @@
 
           <div class="item">
             <div class="item-head">
-              <h3><a href="https://www.credly.com/badges/84fb1f11-d11d-49ba-b060-bc1c59823406/public_url">SAS Programming 1: Essentials</a></h3>
+              <h3><a href="https://www.credly.com/badges/84fb1f11-d11d-49ba-b060-bc1c59823406/public_url">SAS Programming 1: Essentials <span class="verify" data-i18n="certifications.verify">Verify ↗</span></a></h3>
               <span class="item-date" data-i18n="certifications.date1">Dec 2024</span>
             </div>
             <p class="item-meta">SAS</p>
@@ -443,7 +444,7 @@
 
           <div class="item">
             <div class="item-head">
-              <h3><a href="https://verify.skilljar.com/c/rr9m3zkcs2ja">Core Designer Certificate</a></h3>
+              <h3><a href="https://verify.skilljar.com/c/rr9m3zkcs2ja">Core Designer Certificate <span class="verify" data-i18n="certifications.verify">Verify ↗</span></a></h3>
               <span class="item-date" data-i18n="certifications.date2">Jul 2024</span>
             </div>
             <p class="item-meta">Dataiku Academy</p>
@@ -451,7 +452,7 @@
 
           <div class="item">
             <div class="item-head">
-              <h3><a href="https://portal.bloombergforeducation.com/certificates/n5KnRSBd3Mmncgi5prVDf9dA">Bloomberg Market Concepts</a></h3>
+              <h3><a href="https://portal.bloombergforeducation.com/certificates/n5KnRSBd3Mmncgi5prVDf9dA">Bloomberg Market Concepts <span class="verify" data-i18n="certifications.verify">Verify ↗</span></a></h3>
               <span class="item-date" data-i18n="certifications.date3">Nov 2023</span>
             </div>
             <p class="item-meta">Bloomberg for Education</p>
@@ -459,7 +460,7 @@
 
           <div class="item">
             <div class="item-head">
-              <h3><a href="https://coursera.org/verify/3F2SQH65J5RW">Neural Networks and Deep Learning</a></h3>
+              <h3><a href="https://coursera.org/verify/3F2SQH65J5RW">Neural Networks and Deep Learning <span class="verify" data-i18n="certifications.verify">Verify ↗</span></a></h3>
               <span class="item-date" data-i18n="certifications.date4">Apr 2023</span>
             </div>
             <p class="item-meta">DeepLearning.AI · Coursera</p>
@@ -520,7 +521,8 @@
          FOOTER
     ============================================================= -->
     <footer class="site-footer">
-      <p data-i18n="footer.note">Made by Minh. View source on GitHub.</p>
+      <p><span data-i18n="footer.note">Made by Ngoc Minh NGUYEN.</span>
+        <a href="https://github.com/nnm-psd/nnm-psd.github.io" data-i18n="footer.source">View source on GitHub</a></p>
     </footer>
 
     <!-- Scripts: i18n.js must load before main.js -->
